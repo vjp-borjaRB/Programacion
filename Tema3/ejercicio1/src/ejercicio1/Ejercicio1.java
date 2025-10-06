@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author alumno
+ * @author Borja Romero
  */
 public class Ejercicio1 {
 
