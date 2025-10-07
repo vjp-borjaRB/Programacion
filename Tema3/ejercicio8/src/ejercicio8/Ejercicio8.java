@@ -24,7 +24,7 @@ public class Ejercicio8 {
         moneda2 = resto / 2;
         resto = cantidad % 50 % 20 % 10 % 5 % 2;
         moneda1 = resto / 1;
-        System.out.print(cantidad + " euros de descompone en ");
+        System.out.print(cantidad + " euros se descomponen en ");
         if (billete50 != 0) {
             System.out.print(billete50 + " billetes de 50, ");
         }
