@@ -17,7 +17,7 @@ public class Ejercicio9 {
         numero2 = entrada.nextInt();
         System.out.println("Introduzca el tercer numero:");
         numero3 = entrada.nextInt();
-        System.out.println("Por último, introduzca un cuarto numero:");
+        System.out.println("Por ultimo, introduzca un cuarto numero:");
         numero4 = entrada.nextInt();
         if (numero1 > numero2) {
             aux = numero1;
@@ -64,7 +64,7 @@ public class Ejercicio9 {
             numero3 = numero4;
             numero4 = aux;
         }
-        System.out.println(numero1 + " " + numero2 + " " + numero3 + " " + numero4);
+        System.out.println("El orden de los numeros introducidos es el: "+numero1 + "-" + numero2 + "-" + numero3 + "-" + numero4);
     }
 }
 
