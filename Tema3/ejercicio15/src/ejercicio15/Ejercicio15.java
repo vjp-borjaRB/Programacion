@@ -17,5 +17,4 @@ public class Ejercicio15 {
             System.out.println(numero + "x" + multiplicador + "=" + multiplicador * numero);
         }
     }
-
 }
