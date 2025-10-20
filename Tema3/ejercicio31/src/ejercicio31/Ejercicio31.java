@@ -15,11 +15,10 @@ public class Ejercicio31 {
             if (aleatorioEntero % 2 != 0) {
                 numero = aleatorioEntero;
                 totalNum++;
-                intentos++;
                 System.out.println(numero);
             } else {
-                intentos++;
             }
+            intentos++;
         } while (totalNum <= 2);
         System.out.println("El programa ha necesitado " + intentos + " intentos");
     }
