@@ -16,12 +16,13 @@ public class Ejercicio29 {
         aleatorio = Math.floor((Math.random() * 100 + 1));
         aleatorioEntero = (int) aleatorio;
         System.out.println("Introduce un numero entre 1 y 100");
+
         do {
             try {
                 numero = entrada.nextInt();
             } catch (InputMismatchException e) {
+                entrada.nextLine();
                 System.err.println("Has introducido algo distinto de un numero entero, contara como un intento " + e.getMessage());
-                intentos++;
                 numero = 0;
             }
             if (numero < aleatorioEntero) {
@@ -33,5 +34,4 @@ public class Ejercicio29 {
         } while (numero != aleatorioEntero);
         System.out.println("Has acertado, te ha costado " + intentos + " intentos.");
     }
-
 }
