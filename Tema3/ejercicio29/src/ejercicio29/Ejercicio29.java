@@ -16,7 +16,6 @@ public class Ejercicio29 {
         aleatorio = Math.floor((Math.random() * 100 + 1));
         aleatorioEntero = (int) aleatorio;
         System.out.println("Introduce un numero entre 1 y 100");
-
         do {
             try {
                 numero = entrada.nextInt();
