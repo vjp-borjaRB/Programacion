@@ -13,6 +13,8 @@ public class Ejercicio6 {
         int nota;
         System.out.println("Introduce la nota del alumno:");
         nota = entrada.nextInt();
+        /* Recogiendo la nota introducida por el usuario, 
+        despúes se muestra la calificación comparando el valor de nota */
         if (nota >= 0 && nota <= 4) {
             System.out.println("Suspenso");
         } else if (nota >= 5 && nota <= 6) {

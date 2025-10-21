@@ -46,14 +46,11 @@ public class Ejercicio27 {
                         System.err.println("Error: " + e.getMessage());
                         divNum = 0;
                     }
-                    if (divNum != 0) {
-                        System.out.println("La division de los numeros introducidos es: " + divNum);
-                    }
+                    System.out.println("La division de los numeros introducidos es: " + divNum);
                 }
                 case 5 -> {
                 }
             }
         } while (menu != 5);
     }
-
 }
