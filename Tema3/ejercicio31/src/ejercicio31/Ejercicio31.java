@@ -16,7 +16,6 @@ public class Ejercicio31 {
                 numero = aleatorioEntero;
                 totalNum++;
                 System.out.println(numero);
-            } else {
             }
             intentos++;
         } while (totalNum <= 2);
