@@ -1,4 +1,4 @@
-package sumaProd;
+package ejercicio2;
 
 /**
  *

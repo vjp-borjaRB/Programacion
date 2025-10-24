@@ -1,7 +1,6 @@
 package ejercicio2;
 
 import java.util.Scanner;
-import sumaProd.*;
 
 /**
  *
