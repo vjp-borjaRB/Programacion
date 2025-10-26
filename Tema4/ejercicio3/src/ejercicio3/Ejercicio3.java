@@ -1,7 +1,7 @@
 package ejercicio3;
 
 import java.util.Scanner;
-import nummayor.numeroMayor;
+import nummayor.NumeroMayor;
 
 /**
  *
@@ -18,7 +18,7 @@ public class Ejercicio3 {
         num2 = entrada.nextInt();
         System.out.println("Por último, introduzca un tercer numero:");
         num3 = entrada.nextInt();
-        numeroMayor.numMayor(num1, num2, num3);
+        NumeroMayor.numMayor(num1, num2, num3);
     }
     
 }

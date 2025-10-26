@@ -4,7 +4,7 @@ package ejercicio5nuevo;
  *
  * @author Borja Romero
  */
-public class parOimpar {
+public class ParOimpar {
 
     public static void parImpar(int numero) {
         if (numero % 2 == 0) {

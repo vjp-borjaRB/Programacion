@@ -17,7 +17,7 @@ public class Ejercicio4 {
         num2 = entrada.nextInt();
         System.out.println("Por último, introduzca un tercer numero:");
         num3 = entrada.nextInt();
-        numMenor.numeroMenor(num1, num2, num3);
+        NumMenor.numeroMenor(num1, num2, num3);
     }
 
 }

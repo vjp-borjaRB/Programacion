@@ -4,7 +4,7 @@ package nummayor;
  *
  * @author Borja Romero
  */
-public class numeroMayor {
+public class NumeroMayor {
 
     public static void numMayor(int num1, int num2, int num3) {
         if (num1 > num2 && num1 > num3) {

@@ -16,9 +16,9 @@ public class Ejercicio2 {
         System.out.println("Ahora, introduzca un segundo numero:");
         num2 = entrada.nextInt();
         if (num1 > 10) {
-            producto.prod(num1, num2);
+            Producto.prod(num1, num2);
         } else {
-            suma.sum(num1, num2);
+            Suma.sum(num1, num2);
         }
     }
     
