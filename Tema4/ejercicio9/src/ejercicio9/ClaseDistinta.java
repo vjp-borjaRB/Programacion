@@ -8,28 +8,12 @@ import java.util.Scanner;
  */
 public class ClaseDistinta {
 
-    public static int pedir1ernumero() {
+    public static int pedirNumero() {
         Scanner entrada = new Scanner(System.in);
-        int num1;
+        int num;
         System.out.println("Introduce el primer numero");
-        num1 = entrada.nextInt();
-        return num1;
-    }
-
-    public static int pedir2onumero() {
-        Scanner entrada = new Scanner(System.in);
-        int num2;
-        System.out.println("Introduce el segundo numero");
-        num2 = entrada.nextInt();
-        return num2;
-    }
-
-    public static int pedir3ernumero() {
-        Scanner entrada = new Scanner(System.in);
-        int num3;
-        System.out.println("Introduce el tercer numero");
-        num3 = entrada.nextInt();
-        return num3;
+        num = entrada.nextInt();
+        return num;
     }
 
     public static void numeroMenor(int num1, int num2, int num3) {
