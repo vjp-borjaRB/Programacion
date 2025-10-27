@@ -9,17 +9,24 @@ import java.util.Scanner;
 public class Ejercicio7 {
 
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
+
         int num1, num2, num3, num4;
         System.out.println("Por favor, introduzca el primer numero:");
-        num1 = entrada.nextInt();
+        num1 = pedirNumero();
         System.out.println("Ahora, introduzca un segundo numero:");
-        num2 = entrada.nextInt();
+        num2 = pedirNumero();
         System.out.println("Introduzca el tercer numero:");
-        num3 = entrada.nextInt();
+        num3 = pedirNumero();
         System.out.println("Por ultimo, introduzca un cuarto numero:");
-        num4 = entrada.nextInt();
+        num4 = pedirNumero();
         ordenarNumeros(num1, num2, num3, num4);
+    }
+
+    public static int pedirNumero() {
+        Scanner entrada = new Scanner(System.in);
+        int num;
+        num = entrada.nextInt();
+        return num;
     }
 
     public static void ordenarNumeros(int num1, int num2, int num3, int num4) {
