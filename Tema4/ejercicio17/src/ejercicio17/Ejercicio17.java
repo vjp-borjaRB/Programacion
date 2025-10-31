@@ -9,27 +9,40 @@ import java.util.Scanner;
 public class Ejercicio17 {
 
     public static void main(String[] args) {
-        generarLetra();
+        comprobarLetra(generarLetra(), pedirLetra());
 
     }
 
-    public static void generarLetra() {
+    public static int generarLetra() {
         double aleatorio;
         int aleatorioEntero;
-        char letra;
         aleatorio = Math.floor((Math.random() * ((122 - 97) + 1) + 97));
         aleatorioEntero = (int) aleatorio;
-        letra = (char) aleatorioEntero;
-        System.out.println(letra);
-        
+        return aleatorioEntero;
     }
 
-    public static char pedirLetra() {
+    public static int pedirLetra() {
         Scanner entrada = new Scanner(System.in);
         char letra;
+        int letraAscii;
         System.out.println("Por favor, introduce una letra: ");
         letra = entrada.nextLine().charAt(0);
-        return letra;
+        letraAscii = (int) letra;
+        return letraAscii;
+    }
+
+    public static void comprobarLetra(int aleatorioEntero, int letraAscii) {
+        int intentos = 0;
+        do {
+            if (aleatorioEntero > letraAscii) {
+                System.out.println("La letra introducida esta antes en el alfabeto");
+            } else {
+                System.out.println("La letra introducida esta despues en el alfabeto");
+            }
+            letraAscii = pedirLetra();
+            intentos++;
+        } while (aleatorioEntero != letraAscii);
+        System.out.println("Has acertado, has necesitado " + intentos + " intentos");
     }
 
 }
