@@ -12,7 +12,7 @@ public class Ejercicio20 {
     static final String SOLUCION2 = "Cristobal Colon";
 
     public static void main(String[] args) {
-
+        resultado(primeraPregunta(), segundaPregunta());
     }
 
     public static String respuesta() {
@@ -22,17 +22,45 @@ public class Ejercicio20 {
         return respuesta;
     }
 
-    public static boolean primeraPregunta(String respuesta) {
-        boolean resultado;
+    public static boolean primeraPregunta() {
+        String respuesta;
+        boolean resultado1 = false;
         String primeraPregunta = "¿Cual es la capital de Spain?";
+        System.out.println(primeraPregunta);
+        respuesta = respuesta();
         if (respuesta.equalsIgnoreCase(SOLUCION1)) {
             System.out.println("La respuesta es correcta");
+            resultado1 = true;
+        } else {
+            System.err.println("La respuesta es incorrecta");
         }
-
+        return resultado1;
     }
 
-    public static void segundaPregunta() {
+    public static boolean segundaPregunta() {
+        String respuesta;
+        boolean resultado2 = false;
         String segundaPregunta = "¿Quien descubrio America?";
+        System.out.println(segundaPregunta);
+        respuesta = respuesta();
+        if (respuesta.equalsIgnoreCase(SOLUCION2)) {
+            System.out.println("La respuesta es correcta");
+            resultado2 = true;
+        } else {
+            System.err.println("La respuesta es incorrecta");
+        }
+        return resultado2;
+    }
+
+    public static void resultado(boolean resultado1, boolean resultado2) {
+        if (resultado1 && resultado2) {
+            System.out.println("10");
+        } else if (resultado1 != resultado2) {
+            System.out.println("5");
+        } else {
+            System.out.println("0");
+        }
+
     }
 
 }
