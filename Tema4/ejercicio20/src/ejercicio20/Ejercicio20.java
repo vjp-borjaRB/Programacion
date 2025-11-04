@@ -54,11 +54,11 @@ public class Ejercicio20 {
 
     public static void resultado(boolean resultado1, boolean resultado2) {
         if (resultado1 && resultado2) { // Si el usuario responde correctamente a las dos preguntas muestra 10, si acierta una y falla otra 5, si falla las 2 muestra 0. 
-            System.out.println("10");
+            System.out.println("Tu nota es 10");
         } else if (resultado1 != resultado2) {
-            System.out.println("5");
+            System.out.println("Tu nota es 5");
         } else {
-            System.out.println("0");
+            System.out.println("Tu nota es 0");
         }
 
     }
