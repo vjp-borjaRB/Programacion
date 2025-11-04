@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Ejercicio25 {
 
     public static void main(String[] args) {
-
+        calcularResultado(pedirBase(), pedirExponente());
     }
 
     public static int pedirBase() {
@@ -27,11 +27,12 @@ public class Ejercicio25 {
     }
 
     public static void calcularResultado(int base, int exponente) {
-        do {
+        int resultado;
+        while (base == 0 && exponente < 0) {
             base = pedirBase();
             exponente = pedirExponente();
-        } while (base == 0 && exponente < 0);
-        
+        }
+        resultado = (int) Math.pow(base, exponente);
+        System.out.println(resultado);
     }
-
 }
