@@ -31,7 +31,7 @@ public class Ejercicio7 {
 
     public static void ordenarNumeros(int num1, int num2, int num3, int num4) {
         /*Se comparan los números dos a dos y se cambia el valor de las variables utilizando una variable auxiliar 
-        (el proceso se repite n-1 veces siendo n la cantidad de numeros introducidos)*/
+        (el proceso se repite n-1 veces siendo n la cantidad de numeros introducidos).*/
         int aux;
         for (int i = 0; i < 3; i++) {
             if (num1 > num2) {

@@ -16,7 +16,7 @@ public class Ejercicio17 {
         double aleatorio;
         int aleatorioEntero;
         aleatorio = Math.floor((Math.random() * ((122 - 97) + 1) + 97));
-        aleatorioEntero = (int) aleatorio; // Se pasa de double a entero, se omite la parte decimal
+        aleatorioEntero = (int) aleatorio; // Se pasa de double a entero, se omite la parte decimal.
         return aleatorioEntero;
     }
 
@@ -26,12 +26,12 @@ public class Ejercicio17 {
         int letraAscii;
         System.out.println("Por favor, introduce una letra: ");
         letra = entrada.nextLine().charAt(0);
-        letraAscii = (int) letra; // Se convierte el caracter introducido en su equivalente en codigo ASCII
+        letraAscii = (int) letra; // Se convierte el caracter introducido en su equivalente en codigo ASCII.
         return letraAscii;
     }
 
     public static void comprobarLetra(int aleatorioEntero) {
-        // Se comprueba si ambos valores coinciden, si no coinciden se vuelve a pedir la letra hasta que coincidan y se cuentan los intentos
+        // Se comprueba si ambos valores coinciden, si no coinciden se vuelve a pedir la letra hasta que coincidan y se cuentan los intentos.
         int intentos = 0, letraAscii;
         do {
             letraAscii = pedirLetra();

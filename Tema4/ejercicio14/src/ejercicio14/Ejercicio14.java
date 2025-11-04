@@ -9,9 +9,9 @@ import java.util.Scanner;
 public class Ejercicio14 {
 
     public static void main(String[] args) {
-        int numero = pedirNumero(); // Pide el numero
-        numero = comprobarNumero(numero); // Comprueba y actualiza el valor de numero (si es necesario)
-        mostrarResultado(numero); // Muestra un resultado dependiendo del valor de numero
+        int numero = pedirNumero(); // Pide el numero.
+        numero = comprobarNumero(numero); // Comprueba y actualiza el valor de numero (si es necesario).
+        mostrarResultado(numero); // Muestra un resultado dependiendo del valor de numero.
     }
 
     public static int pedirNumero() {
@@ -23,7 +23,7 @@ public class Ejercicio14 {
     }
 
     public static int comprobarNumero(int numero) {
-        while (numero <= 0) { // Si el numero introducido es menor o igual a 0 vuelve a pedir el numero
+        while (numero <= 0) { // Si el numero introducido es menor o igual a 0 vuelve a pedir el numero.
             numero = pedirNumero();
         }
         return numero;
