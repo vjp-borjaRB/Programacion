@@ -12,7 +12,21 @@ public class Bicicleta {
     private String tipo;
     private int antiguedad;
 
-    // Constructores mas adelante
+    // Constructores
+    public Bicicleta() {
+        marca = "";
+        color = "";
+        tipo = "";
+        antiguedad = 0;
+    }
+
+    public Bicicleta(String m, String c, String t, int a) {
+        marca = m;
+        color = c;
+        tipo = t;
+        antiguedad = a;
+    }
+
     // Getters/Setters
     public String getMarca() {
         return marca;
@@ -62,4 +76,10 @@ public class Bicicleta {
         System.out.println("Color: " + color);
         System.out.println("Antiguedad: " + antiguedad);
     }
+
+    @Override
+    public String toString() {
+        return "Bicicleta{" + "marca=" + marca + ", color=" + color + ", tipo=" + tipo + ", antiguedad=" + antiguedad + '}';
+    }
+
 }
