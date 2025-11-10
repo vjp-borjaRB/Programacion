@@ -2,7 +2,7 @@ package pruebaclase;
 
 /**
  *
- * @author alumno
+ * @author Borja Romero
  */
 public class Bicicleta {
     // Atributos 
