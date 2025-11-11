@@ -8,6 +8,16 @@ public class Rueda {
 
     private String material;
     private int pulgadas;
+    
+    public Rueda() {
+        material = "";
+        pulgadas = 0;
+    }
+
+    public Rueda(String mat, int pul) {
+        material = mat;
+        pulgadas= pul;
+    }
 
     public void establecerMaterial(String mat) {
         material = mat;
@@ -24,4 +34,6 @@ public class Rueda {
     public int obtenerPulgadas() {
         return pulgadas;
     }
+    
+    
 }

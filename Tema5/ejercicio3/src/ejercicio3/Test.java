@@ -36,15 +36,18 @@ public class Test {
 
         System.out.println(coche1.obtenerMarca());
         System.out.println(coche1.obtenerModelo());
-        System.out.println(coche1.obtenerRueda());
+        System.out.println(coche1.obtenerRueda().obtenerPulgadas());
+        System.out.println(coche1.obtenerRueda().obtenerMaterial());
 
         System.out.println(coche2.obtenerMarca());
         System.out.println(coche2.obtenerModelo());
-        System.out.println(coche2.obtenerRueda());
+        System.out.println(coche2.obtenerRueda().obtenerPulgadas());
+        System.out.println(coche2.obtenerRueda().obtenerMaterial());
 
         System.out.println(coche3.obtenerMarca());
         System.out.println(coche3.obtenerModelo());
-        System.out.println(coche3.obtenerRueda());
+        System.out.println(coche3.obtenerRueda().obtenerPulgadas());
+        System.out.println(coche3.obtenerRueda().obtenerMaterial());
     }
 
 }
