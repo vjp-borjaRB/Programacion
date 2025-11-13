@@ -22,5 +22,4 @@ public class PruebaClase {
         bici1.mostrarAntiguedad();
         bici2.mostrarAntiguedad();
     }
-
 }
