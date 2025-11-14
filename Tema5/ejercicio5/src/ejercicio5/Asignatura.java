@@ -16,8 +16,25 @@ public class Asignatura {
         nota = 0;
     }
 
+    public Asignatura(String a, double not) {
+        asignatura = a;
+        nota = not;
+    }
+
     public Asignatura(String a) {
         asignatura = a;
+        nota = 0;
+    }
+
+    // Mostrar
+    public void mostrarAsignaturas() {
+        System.out.println(asignatura);
+        System.out.println(nota);
+    }
+
+    @Override
+    public String toString() {
+        return "Asignatura{" + "asignatura=" + asignatura + ", nota=" + nota + '}';
     }
 
     // Set & Get

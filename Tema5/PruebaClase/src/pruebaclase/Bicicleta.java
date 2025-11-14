@@ -11,6 +11,10 @@ public class Bicicleta {
     private String color;
     private String tipo;
     private int antiguedad;
+    private Propietario propietario;
+
+    // Atributo estatico
+    private static int contadorBicicleta = 0;
 
     // Constructores
     public Bicicleta() {
@@ -18,13 +22,25 @@ public class Bicicleta {
         color = "";
         tipo = "";
         antiguedad = 0;
+        propietario = new Propietario();
+        aumentarContadorBicicleta();
     }
 
-    public Bicicleta(String m, String c, String t, int a) {
+    public Bicicleta(String m, String c, String t, int a, String nompropietario, int edadpropietario) {
         marca = m;
         color = c;
         tipo = t;
         antiguedad = a;
+        propietario = new Propietario(nompropietario, edadpropietario);
+        aumentarContadorBicicleta();
+    }
+
+    public Bicicleta(String m) {
+        marca = m;
+        color = "";
+        tipo = "";
+        antiguedad = 0;
+        aumentarContadorBicicleta();
     }
 
     // Getters/Setters
@@ -60,6 +76,24 @@ public class Bicicleta {
         antiguedad = a;
     }
 
+    public static int getContadorBicicleta() {
+        return contadorBicicleta;
+    }
+
+    public static void setContadorBicicleta(int contadorBicicleta) {
+        Bicicleta.contadorBicicleta = contadorBicicleta;
+    }
+
+    public Propietario getPropietario() {
+        return propietario;
+    }
+
+    public void setPropietario(Propietario propietario) {
+        this.propietario = propietario;
+    }
+    
+    
+
     // Otros metodos
     public void mostrarAntiguedad() {
         if (antiguedad > 10) {
@@ -68,6 +102,10 @@ public class Bicicleta {
             System.out.println("La bici es nueva");
         }
     }
+
+    public static void aumentarContadorBicicleta() {
+        contadorBicicleta++;
+    }
     // Mostrar
 
     public void mostrarBicicleta() {
@@ -75,6 +113,7 @@ public class Bicicleta {
         System.out.println("Tipo: " + tipo);
         System.out.println("Color: " + color);
         System.out.println("Antiguedad: " + antiguedad);
+        System.out.println(propietario.toString());
     }
 
     @Override

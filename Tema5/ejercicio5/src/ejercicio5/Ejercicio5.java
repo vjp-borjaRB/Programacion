@@ -29,7 +29,7 @@ public class Ejercicio5 {
         sistemasInformaticos.setNota(entrada.nextDouble());
         System.out.println("Por ultimo, introduzca la nota de Formacion y Orientacion Laboral: ");
         fyoLaboral.setNota(entrada.nextDouble());
-        
+
         System.out.println(Asignatura.calcularNotaMedia(programacion.getNota(), lenguajesMarcas.getNota(), basesDatos.getNota(), entornosDesarrollo.getNota(), sistemasInformaticos.getNota(), fyoLaboral.getNota()));
 
     }
