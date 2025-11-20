@@ -46,7 +46,7 @@ public class Empleado {
     }
 
     public void setDireccion(Direccion direccion) {
-        this.direccion = new Direccion();
+        this.direccion = direccion;
     }
 
     // Mostrar
