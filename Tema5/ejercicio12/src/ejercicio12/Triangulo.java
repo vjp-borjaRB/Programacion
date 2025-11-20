@@ -37,14 +37,19 @@ public class Triangulo {
     public double getCateto2() {
         return cateto2;
     }
-    
-    // Mostrar
 
+    // Mostrar
     @Override
     public String toString() {
         return "Triangulo{" + "cateto1=" + cateto1 + ", cateto2=" + cateto2 + '}';
     }
     
-    
+    // Otros métodos
+
+    public static double calcularHipotenusa(double cateto1, double cateto2) {
+        double hipotenusa;
+        hipotenusa = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
+        return hipotenusa;
+    }
 
 }
