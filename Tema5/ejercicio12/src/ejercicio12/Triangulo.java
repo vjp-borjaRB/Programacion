@@ -46,10 +46,12 @@ public class Triangulo {
     
     // Otros métodos
 
-    public static double calcularHipotenusa(double cateto1, double cateto2) {
+    public void calcularHipotenusa() {
         double hipotenusa;
         hipotenusa = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
-        return hipotenusa;
+        System.out.println(hipotenusa);
     }
+    
+    // no static , no get, sin parametros de entrada.
 
 }
