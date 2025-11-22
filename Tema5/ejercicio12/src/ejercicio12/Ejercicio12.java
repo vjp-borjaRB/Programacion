@@ -15,6 +15,6 @@ public class Ejercicio12 {
         triangulo1.setCateto1(entrada.nextDouble());
         System.out.print("Introduce la longitud del segundo cateto: ");
         triangulo1.setCateto2(entrada.nextDouble());
-        System.out.println("La hipotenusa es: " + Triangulo.calcularHipotenusa(triangulo1.getCateto1(), triangulo1.getCateto2()));
+        triangulo1.calcularHipotenusa();
     }
 }
