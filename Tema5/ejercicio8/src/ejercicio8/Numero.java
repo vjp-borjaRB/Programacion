@@ -33,8 +33,8 @@ public class Numero {
         return "Numero{" + "valor=" + valor + '}';
     }
 
-    public static void parImpar(Numero numero1) {
-        if (numero1.getValor() % 2 == 0) {
+    public void parImpar() {
+        if (valor % 2 == 0) {
             System.out.println("El numero introducido es par");
         } else {
             System.out.println("El numero introducido es impar");

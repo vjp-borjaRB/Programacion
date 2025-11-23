@@ -13,7 +13,7 @@ public class Ejercicio8 {
         System.out.println("Introduce un numero: ");
         int valor = entrada.nextInt();
         Numero numero1 = new Numero(valor); // Se crea objeto y se le pasa como parámetro el numero introducido por el usuario (valor)
-        Numero.parImpar(numero1);  
+        numero1.parImpar();  
     }
     
 }
