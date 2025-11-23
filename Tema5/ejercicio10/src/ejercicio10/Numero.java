@@ -35,10 +35,10 @@ public class Numero {
     // Otros métodos
     public static void ordenarNumeros(Numero numero1, Numero numero2, Numero numero3, Numero numero4) {
         int aux;
-        int num1 = numero1.getValor();
-        int num2 = numero2.getValor();
-        int num3 = numero3.getValor();
-        int num4 = numero4.getValor();
+        int num1 = numero1.valor;
+        int num2 = numero2.valor;
+        int num3 = numero3.valor;
+        int num4 = numero4.valor;
 
         /*Se comparan los números dos a dos y se cambia el valor de las variables utilizando una variable auxiliar 
         (el proceso se repite n-1 veces siendo n la cantidad de numeros introducidos).*/
