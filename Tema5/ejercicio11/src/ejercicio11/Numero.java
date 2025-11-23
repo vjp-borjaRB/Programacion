@@ -26,18 +26,10 @@ public class Numero {
     public int getValor() {
         return valor;
     }
-    
-    // Mostrar
 
+    // Mostrar
     @Override
     public String toString() {
         return "Numero{" + "valor=" + valor + '}';
     }
-    
-    // Otros métodos
-    
-    
-    
-    
-
 }
