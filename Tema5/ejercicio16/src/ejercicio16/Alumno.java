@@ -8,15 +8,15 @@ public class Alumno {
 
     // Atributos 
     private String nombre;
-    private double nota;
+    private String nota;
 
     // Constructores
     public Alumno() {
         nombre = "";
-        nota = 0;
+        nota = "";
     }
 
-    public Alumno(String nombre, double nota) {
+    public Alumno(String nombre, String nota) {
         this.nombre = nombre;
         this.nota = nota;
     }
@@ -26,7 +26,7 @@ public class Alumno {
         return nombre;
     }
 
-    public double getNota() {
+    public String getNota() {
         return nota;
     }
 
@@ -34,7 +34,7 @@ public class Alumno {
         this.nombre = nombre;
     }
 
-    public void setNota(double nota) {
+    public void setNota(String nota) {
         this.nota = nota;
     }
 

@@ -50,13 +50,16 @@ public class Empleado {
     }
 
     // Mostrar
+    public void mostrarEmpleado() {
+        System.out.println("EMPLEADO");
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Salario: " + salario);
+        direccion.mostarDireccion(); // Accediendo al método mostrarDireccion de la clase Direccion
+    }
+
     @Override
     public String toString() {
         return "Empleado{" + "nombre=" + nombre + ", salario=" + salario + ", direccion=" + direccion + '}';
-    }
-
-    public static void mostrarDatosEmpleados(Empleado empleado) {
-        System.out.println(empleado.toString());
     }
 
 }

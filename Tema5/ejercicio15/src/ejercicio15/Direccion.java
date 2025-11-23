@@ -59,8 +59,15 @@ public class Direccion {
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
-    
+
     // Mostrar
+    public void mostarDireccion() {
+        System.out.println("Direccion: ");
+        System.out.println("\tCalle: " + calle);
+        System.out.println("\tNumero: " + numero);
+        System.out.println("\tPuerta: " + piso);
+        System.out.println("\tCiudad: " + ciudad);
+    }
 
     @Override
     public String toString() {

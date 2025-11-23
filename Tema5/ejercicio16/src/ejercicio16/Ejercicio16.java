@@ -9,45 +9,48 @@ import java.util.Scanner;
 public class Ejercicio16 {
 
     public static void main(String[] args) {
-        Alumno alumno1 = new Alumno(pedirNombre(), comprobarNota(pedirNota()));
-        Alumno alumno2 = new Alumno(pedirNombre(), comprobarNota(pedirNota()));
-        Alumno alumno3 = new Alumno(pedirNombre(), comprobarNota(pedirNota()));
+        Alumno alumno1 = new Alumno(pedirNombre(), escribirCalificacion(comprobarNota(pedirNota())));
+        Alumno alumno2 = new Alumno(pedirNombre(), escribirCalificacion(comprobarNota(pedirNota())));
+        Alumno alumno3 = new Alumno(pedirNombre(), escribirCalificacion(comprobarNota(pedirNota())));
+        System.out.println(alumno1);
+        System.out.println(alumno2);
+        System.out.println(alumno3);
     }
 
     public static String pedirNombre() {
         Scanner entrada = new Scanner(System.in);
+        System.out.print("Introduce tu nombre: ");
         String nombre = entrada.nextLine();
         return nombre;
     }
 
     public static double pedirNota() {
         Scanner entrada = new Scanner(System.in);
+        System.out.print("Introduce tu nota: ");
         double nota = entrada.nextDouble();
         return nota;
     }
 
-    public static double comprobarNota(double nota) {
-        boolean notaUsuario = false;
-        if (nota >= 0 && nota <= 10) {
-            notaUsuario = true;
-        }
-        while (!notaUsuario) {
-            System.out.println("Introduce una nota valida: ");
+    public static double comprobarNota(double nota) { // Si la nota introducida es menor que 0 o mayor que 10, se vuelve a pedir.
+        while (nota < 0 || nota > 10) {
+            System.err.println("Has introducido una nota invalida");
             nota = pedirNota();
         }
         return nota;
     }
 
-    public static void mostrarCalificacion(double nota) {
+    public static String escribirCalificacion(double nota) { // Según el valor de nota devolvemos un String con la calificación.
+        String calificacion;
         if (nota >= 0 && nota <= 4) {
-            System.out.println("Suspenso");
+            calificacion = "Suspenso";
         } else if (nota >= 5 && nota <= 6) {
-            System.out.println("Bien");
+            calificacion = "Bien";
         } else if (nota >= 7 && nota <= 8) {
-            System.out.println("Notable");
+            calificacion = "Notable";
         } else {
-            System.out.println("Sobresaliente");
+            calificacion = "Sobresaliente";
         }
+        return calificacion;
     }
 
 }
