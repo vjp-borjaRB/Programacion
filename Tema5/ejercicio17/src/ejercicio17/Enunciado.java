@@ -2,17 +2,15 @@ package ejercicio17;
 
 /**
  *
- * @author
+ * @author Borja Romero
  */
 public class Enunciado {
 
     // Atributos
-    
     private String pregunta;
     private String respuesta;
-    
-    // Constructores
 
+    // Constructores
     public Enunciado() {
         pregunta = "";
         respuesta = "";
@@ -24,7 +22,6 @@ public class Enunciado {
     }
 
     // Get & Sett
-    
     public String getPregunta() {
         return pregunta;
     }
@@ -40,17 +37,10 @@ public class Enunciado {
     public void setRespuesta(String respuesta) {
         this.respuesta = respuesta;
     }
-    
-    // Mostrar
 
+    // Mostrar
     @Override
     public String toString() {
         return "Enunciado{" + "pregunta=" + pregunta + ", respuesta=" + respuesta + '}';
     }
-    
-    // Otros métodos
-    
-    
-    
-    
 }
