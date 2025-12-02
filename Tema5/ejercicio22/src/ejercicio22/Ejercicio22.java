@@ -13,22 +13,32 @@ public class Ejercicio22 {
         Producto perros = new Perro("Perros", 300, 12);
         Producto conejos = new Conejo("Conejos", 60, 32);
         int opcion;
+        boolean seguir = true;
+        float total = 0;
         do {
             mostrarMenu(gatos, perros, conejos);
             opcion = pedirOpcion();
             switch (opcion) {
                 case 1 -> {
-                    opcion = gatos.menuCompra();
+                    total = gatos.realizarCompra(pedirCantidad(), total);
+                    seguir = seguirComprando();
                 }
                 case 2 -> {
+                    total = perros.realizarCompra(pedirCantidad(), total);
+                    seguir = seguirComprando();
                 }
                 case 3 -> {
+                    total = conejos.realizarCompra(pedirCantidad(), total);
+                    seguir = seguirComprando();
                 }
                 case 4 -> {
                     opcion = 4;
                 }
             }
-        } while (opcion != 4);
+        } while (opcion != 4 && seguir);
+
+        System.out.println(total);
+
     }
 
     public static int pedirOpcion() {
@@ -57,5 +67,13 @@ public class Ejercicio22 {
         System.out.println("Desea realizar otra compra?");
         String comprar = entradaV.nextLine();
         return comprar;
+    }
+
+    public static boolean seguirComprando() {
+        boolean seguir = true;
+        if (volverComprar().equalsIgnoreCase("no")) {
+            seguir = false;
+        }
+        return seguir;
     }
 }

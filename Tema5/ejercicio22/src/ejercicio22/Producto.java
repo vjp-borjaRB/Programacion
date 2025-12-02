@@ -59,19 +59,10 @@ public class Producto {
     }
     // Otros metodos
 
-    public void realizarCompra(int cantidad) {
+    public float realizarCompra(int cantidad, float total) {
+        float totalCompra;
         this.stock = stock - cantidad;
+        totalCompra = cantidad * precio + total;
+        return totalCompra;
     }
-
-    public int menuCompra() {
-        System.out.println("Has elegido comprar " + nombre + "\n");
-        realizarCompra(Ejercicio22.pedirCantidad());
-        String volverComprar = Ejercicio22.volverComprar();
-        if (volverComprar.equalsIgnoreCase("no")) {
-            return 4;
-        } else {
-            return 0;
-        }
-    }
-
 }
