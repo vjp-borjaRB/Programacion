@@ -6,6 +6,7 @@ package ejercicio4;
  */
 public class Leon extends Felino {
 
+    //Constructores
     public Leon() {
         super();
     }
@@ -14,6 +15,7 @@ public class Leon extends Felino {
         super(nombre, edad, peso);
     }
 
+    //Mostrar
     @Override
     public void mostrarSonido() {
         System.out.println("Sonido: Rugido");

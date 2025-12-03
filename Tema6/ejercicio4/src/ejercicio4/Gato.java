@@ -6,6 +6,7 @@ package ejercicio4;
  */
 public class Gato extends Felino {
 
+    //Constructores
     public Gato() {
         super();
     }
@@ -14,6 +15,7 @@ public class Gato extends Felino {
         super(nombre, edad, peso);
     }
 
+    //Mostrar
     @Override
     public void mostrarSonido() {
         System.out.println("Sonido: Maullido");

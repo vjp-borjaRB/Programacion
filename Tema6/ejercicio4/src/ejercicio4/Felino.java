@@ -6,6 +6,7 @@ package ejercicio4;
  */
 public abstract class Felino extends Animal {
 
+    //Constructores
     public Felino() {
         super();
     }
@@ -14,6 +15,7 @@ public abstract class Felino extends Animal {
         super(nombre, edad, peso);
     }
 
+    //Mostrar
     @Override
     public abstract void mostrarNombreCientifico();
 

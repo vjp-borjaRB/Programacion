@@ -6,6 +6,7 @@ package ejercicio4;
  */
 public class Perro extends Canido {
 
+    //Constructores
     public Perro() {
     }
 
@@ -13,6 +14,7 @@ public class Perro extends Canido {
         super(nombre, edad, peso);
     }
 
+    //Mostrar
     @Override
     public void mostrarSonido() {
         System.out.println("Sonido: Ladrido");

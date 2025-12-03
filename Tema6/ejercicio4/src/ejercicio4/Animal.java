@@ -73,5 +73,4 @@ public abstract class Animal {
     public abstract void mostrarHabitat();
 
     public abstract void mostrarNombreCientifico();
-
 }

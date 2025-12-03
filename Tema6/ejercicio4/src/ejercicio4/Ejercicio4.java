@@ -25,8 +25,6 @@ public class Ejercicio4 {
         perro2.mostrarAnimal();
         gato2.mostrarAnimal();
         leon2.mostrarAnimal();
-        lobo2.mostrarAnimal();
-        
+        lobo2.mostrarAnimal();  
     }
-
 }

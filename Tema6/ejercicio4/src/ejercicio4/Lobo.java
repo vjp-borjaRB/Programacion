@@ -6,6 +6,7 @@ package ejercicio4;
  */
 public class Lobo extends Canido {
 
+    //Constructores
     public Lobo() {
         super();
     }
@@ -14,6 +15,7 @@ public class Lobo extends Canido {
         super(nombre, edad, peso);
     }
 
+    //Mostrar
     @Override
     public void mostrarAlimentacion() {
         System.out.println("Alimentacion: Carnivoro");
