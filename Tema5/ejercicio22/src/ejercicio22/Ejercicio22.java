@@ -70,8 +70,11 @@ public class Ejercicio22 {
     }
 
     public static boolean seguirComprando() {
-        boolean seguir = true;
-        if (volverComprar().equalsIgnoreCase("no")) {
+        boolean seguir = false;
+        String volver = volverComprar();
+        if (volver.equalsIgnoreCase("Si")) {
+            seguir = true;
+        } else if (volver.equalsIgnoreCase("No")) {
             seguir = false;
         }
         return seguir;

@@ -60,9 +60,19 @@ public class Producto {
     // Otros metodos
 
     public float realizarCompra(int cantidad, float total) {
-        float totalCompra;
-        this.stock = stock - cantidad;
-        totalCompra = cantidad * precio + total;
-        return totalCompra;
+        if (comprobarStock(cantidad)) {
+            System.err.println("No hay suficiente stock disponible.");
+            return total;
+        }
+        stock -= cantidad;
+        return total + cantidad * precio;
+    }
+
+    public boolean comprobarStock(int cantidad) {
+        boolean noStock = false;
+        if (cantidad > stock) {
+            noStock = true;
+        }
+        return noStock;
     }
 }
