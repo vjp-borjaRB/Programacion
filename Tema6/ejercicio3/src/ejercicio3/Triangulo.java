@@ -48,7 +48,9 @@ public abstract class Triangulo extends FiguraGeometrica {
 
     // Otros métodos
     @Override
-    public abstract void calcularArea();
+    public void calcularArea() {
+        System.out.println("El area del triangulo rectangulo " + getColor() + " es: " + getBase() * getAltura() / 2);
+    }
 
     @Override
     public abstract void calcularPerimetro();

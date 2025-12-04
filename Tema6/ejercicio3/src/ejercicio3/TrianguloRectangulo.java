@@ -23,13 +23,8 @@ public class TrianguloRectangulo extends Triangulo {
 
     // Otros métodos
     @Override
-    public void calcularArea() {
-        System.out.println("El area del triangulo rectangulo " + getColor() + " es: " + getBase() * getAltura() / 2);
-    }
-
-    @Override
     public void calcularPerimetro() {
-        System.out.println("El area del triangulo rectangulo " + getColor() + " es: " + getBase() * getAltura() / 2);
+        System.out.println("El area del triangulo rectangulo " + getColor() + " es: " + getBase() + getAltura() + calcularHipotenusa());
     }
 
     public double calcularHipotenusa() {
