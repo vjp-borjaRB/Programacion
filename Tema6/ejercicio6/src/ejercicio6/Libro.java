@@ -1,0 +1,99 @@
+package ejercicio6;
+
+/**
+ *
+ * @author Borja Romero
+ */
+public class Libro implements Transformable {
+    //Atributos
+
+    private String titulo;
+    private String autor;
+    private String genero;
+
+    //Constructores
+    public Libro() {
+        titulo = "";
+        autor = "";
+        genero = "";
+    }
+
+    public Libro(String titulo, String autor, String genero) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.genero = genero;
+    }
+
+    // Get & Set
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    //Mostrar
+    @Override
+    public String toString() {
+        return "Libro{" + "titulo=" + titulo + ", autor=" + autor + ", genero=" + genero + '}';
+    }
+
+    @Override
+    public String concatenarTodo() {
+        return "" + titulo + "#" + autor + "#" + genero;
+    }
+
+    @Override
+    public String obtenerIniciales() {
+        return "" + titulo.charAt(0) + autor.charAt(0) + genero.charAt(0);
+    }
+
+    @Override
+    public void contarVocales() {
+
+    }
+
+    public int contarVocales2(Libro libro) {
+        int nVocales = 0;
+        for (int i = 0; i < titulo.length(); i++) {
+            if (titulo.charAt(i) == 'a' ) {
+                nVocales++;
+            }
+        }
+        return nVocales;
+    }
+
+    @Override
+    public String obtenerCadenaMasLarga() {
+        if (titulo.length() > autor.length() && titulo.length() > genero.length()) {
+            return titulo;
+        } else if (autor.length() > titulo.length() && autor.length() > genero.length()) {
+            return autor;
+        } else {
+            return genero;
+        }
+    }
+
+    @Override
+    public boolean buscarCadena(String cadena) {
+        return cadena.equalsIgnoreCase(autor) || cadena.equalsIgnoreCase(titulo) || cadena.equalsIgnoreCase(genero);
+    }
+
+}
