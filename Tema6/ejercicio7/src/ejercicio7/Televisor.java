@@ -81,9 +81,9 @@ public class Televisor implements ControlRemoto {
     }
 
     @Override
-    public void cambiarCanal(int canal) {
+    public void cambiarCanal(float canal) {
         if (encendido) {
-            setCanal(canal);
+            setCanal((int)canal);
             System.out.println("Canal " + canal);
         }
     }

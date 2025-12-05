@@ -14,5 +14,5 @@ public interface ControlRemoto {
 
     public void subirVolumen();
 
-    public void cambiarCanal(int canal);
+    public void cambiarCanal(float canal);
 }
