@@ -11,6 +11,11 @@ public class Ejercicio3 {
         Cuadrado cuadrado = new Cuadrado("azul", 3);
         Rectangulo rectangulo = new Rectangulo("amarillo", 3, 5);
         TrianguloRectangulo trianguloRectangulo= new TrianguloRectangulo("negro", 4, 7);
+        
+        Circulo prueba = new Circulo();
+        FiguraGeometrica pruebac = (FiguraGeometrica) prueba;
+        
+        prueba.calcularArea();
 
         circulo.calcularArea();
         circulo.calcularPerimetro();
