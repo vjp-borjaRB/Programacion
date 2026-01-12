@@ -16,21 +16,16 @@ public class Ejercicio8 {
     }
 
     public static void dividirCifras(int numero, int[] vector) {
-        int cifra1, cifra2, cifra3, cifra4, cifra5;
-        cifra1 = numero / 10000;
-        vector[4] = cifra1;
-        cifra2 = (numero / 1000) % 10;
-        vector[3] = cifra2;
-        cifra3 = (numero / 100) % 10;
-        vector[2] = cifra3;
-        cifra4 = (numero / 10) % 10;
-        vector[1] = cifra4;
-        cifra5 = numero % 10;
-        vector[0] = cifra5;
+        int cifra;
+        for (int i = 0; i < vector.length; i++) {
+            cifra = numero % 10;
+            numero /= 10;
+            vector[i] = cifra;
+        }
     }
 
     public static void mostrarArray(int[] vector) {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < vector.length; i++) {
             System.out.println(vector[i]);
         }
     }
