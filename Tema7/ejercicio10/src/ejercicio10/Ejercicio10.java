@@ -18,6 +18,11 @@ public class Ejercicio10 {
         int numero = 0;
         for (int i = 0; i < vector.length; i++) {
             vector[i] = numero;
+            for (int j = 0; j < vector.length; j++) {
+                if (numero == vector[j]) {
+                    vector[j] = 0;
+                }
+            }
         }
     }
 
