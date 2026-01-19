@@ -15,11 +15,10 @@ public class Ejercicio10 {
     }
 
     public static void sustituirRepetidos(int[] vector) {
-        int numero = 0;
         for (int i = 0; i < vector.length; i++) {
-            vector[i] = numero;
-            for (int j = 0; j < vector.length; j++) {
-                if (numero == vector[j]) {
+            int numero = vector[i];
+            for (int j = i + 1; j < vector.length; j++) {
+                if (vector[j] == numero) {
                     vector[j] = 0;
                 }
             }
