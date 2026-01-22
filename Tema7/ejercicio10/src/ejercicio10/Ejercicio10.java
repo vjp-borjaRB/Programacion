@@ -6,7 +6,7 @@ package ejercicio10;
  */
 public class Ejercicio10 {
 
-    public static void rellanarAleatorios(int[] vector) {
+    public static void rellenarAleatorios(int[] vector) {
         for (int i = 0; i < vector.length; i++) {
             int aleatorio = (int) (Math.random() * 8) + 1;
             vector[i] = aleatorio;
@@ -33,7 +33,7 @@ public class Ejercicio10 {
 
     public static void main(String[] args) {
         int[] vector = new int[10];
-        rellanarAleatorios(vector);
+        rellenarAleatorios(vector);
         mostrarArray(vector);
         sustituirRepetidos(vector);
         mostrarArray(vector);
