@@ -108,9 +108,9 @@ public class Ejercicio15 {
                 maxVentasMes = ventasCoches[i];
             }
             if (ventasCoches[i] == maxVentasMes) {
-            
+                mejorMes = meses[i];
             }
-            
         }
+        System.out.println(mejorMes);
     }
 }
