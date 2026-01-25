@@ -13,10 +13,10 @@ public class Ejercicio16 {
         String[] alumno = {"Pepe", "Juan", "Ana", "Marta", "Pedro", "Maria"};
         String[] asignatura = {"Lengua", "Mates", "Historia", "Fisica"};
         int[][] nota = new int[4][6];
-        mostrarMenu(entrada, alumno, asignatura, nota);
+        menu(entrada, alumno, asignatura, nota);
     }
 
-    public static void mostrarMenu(Scanner entrada, String[] alumno, String[] asignatura, int[][] nota) {
+    public static void menu(Scanner entrada, String[] alumno, String[] asignatura, int[][] nota) { // Menú.
         int menu;
         do {
             imprimirMenu();
@@ -44,12 +44,12 @@ public class Ejercicio16 {
         } while (menu != 6);
     }
 
-    public static int pedirOpcion(Scanner entrada) {
+    public static int pedirOpcion(Scanner entrada) { // Entrada usuario.
         int opcion = entrada.nextInt();
         return opcion;
     }
 
-    public static void imprimirMenu() {
+    public static void imprimirMenu() { // Mostrar opciones menú.
         System.out.println("1. Rellenar las notas de los alumnos.");
         System.out.println("2. Mostrar notas alumnos.");
         System.out.println("3. Mejor alumno de la clase.");
@@ -58,7 +58,7 @@ public class Ejercicio16 {
         System.out.println("6. Salir del programa.");
     }
 
-    public static void rellenarNotas(String[] alumno, String[] asignatura, int[][] nota, Scanner entrada) {
+    public static void rellenarNotas(String[] alumno, String[] asignatura, int[][] nota, Scanner entrada) { // Asignar notas a cada alumno (muestra nombre de asignatura y nombre de todos los alumnos para cada asignatura).
         for (int asignaturas = 0; asignaturas < asignatura.length; asignaturas++) {
             System.out.println(asignatura[asignaturas]);
             for (int alumnos = 0; alumnos < alumno.length; alumnos++) {
@@ -68,7 +68,7 @@ public class Ejercicio16 {
         }
     }
 
-    public static void mostrarNotas(String[] alumno, String[] asignatura, int[][] nota) {
+    public static void mostrarNotas(String[] alumno, String[] asignatura, int[][] nota) { // Muestra las notas de los alumnos ordenadas por asignatura.
         for (int asignaturas = 0; asignaturas < asignatura.length; asignaturas++) {
             System.out.println(asignatura[asignaturas]);
             for (int alumnos = 0; alumnos < alumno.length; alumnos++) {
@@ -77,16 +77,16 @@ public class Ejercicio16 {
         }
     }
 
-    public static void mejorAlumno(String[] alumno, String[] asignatura, int[][] nota) {
+    public static void mejorAlumno(String[] alumno, String[] asignatura, int[][] nota) { // Mostrar nombre del alumno con la nota media mas alta.
         int mediaMax = 0;
         String mejorAlumno = "";
         for (int alumnos = 0; alumnos < alumno.length; alumnos++) {
             int suma = 0;
             for (int asignaturas = 0; asignaturas < asignatura.length; asignaturas++) {
-                suma += nota[asignaturas][alumnos];
+                suma += nota[asignaturas][alumnos]; // Acumula las notas del alumno de las distintas asignaturas.
             }
-            int notamedia = suma / asignatura.length;
-            if (notamedia > mediaMax) {
+            int notamedia = suma / asignatura.length; // Calcula la nota media del alumno.
+            if (notamedia > mediaMax) { // Si la nota media del alumno es mayor que la nota media máxima, la nota pasa a ser la nota máxima y guarda el nombre del alumno en una variable.
                 mediaMax = notamedia;
                 mejorAlumno = alumno[alumnos];
             }
@@ -94,17 +94,17 @@ public class Ejercicio16 {
         System.out.println(mejorAlumno);
     }
 
-    public static void peorAlumno(String[] alumno, String[] asignatura, int[][] nota) {
+    public static void peorAlumno(String[] alumno, String[] asignatura, int[][] nota) { // Mostrar el nombre del alumno con mayor número de suspensos.
         int maxSuspensos = 0;
         String peorAlumno = "";
-        for (int alumnos = 0; alumnos < alumno.length; alumnos++) {
+        for (int alumnos = 0; alumnos < alumno.length; alumnos++) { // Recorrer alumnos.
             int nsuspensos = 0;
-            for (int asignaturas = 0; asignaturas < asignatura.length; asignaturas++) {
-                if (nota[asignaturas][alumnos] < 5) {
+            for (int asignaturas = 0; asignaturas < asignatura.length; asignaturas++) { // Recorrer asignaturas.
+                if (nota[asignaturas][alumnos] < 5) { // Si la nota de la asignatura es suspoenso, se incrementa el número de suspensos.
                     nsuspensos++;
                 }
             }
-            if (nsuspensos > maxSuspensos) {
+            if (nsuspensos > maxSuspensos) { // Si el numero de suspensos del alumno es mayor que el numero máximo de suspensos, se establece como máximo y se guarda el nombre del alumno en una variable.
                 maxSuspensos = nsuspensos;
                 peorAlumno = alumno[alumnos];
             }
@@ -112,16 +112,16 @@ public class Ejercicio16 {
         System.out.println(peorAlumno);
     }
 
-    public static void asignaturaDificil(String[] alumno, String[] asignatura, int[][] nota) {
+    public static void asignaturaDificil(String[] alumno, String[] asignatura, int[][] nota) { // Mostrar asignatura con peor nota media de alumnos.
         int peorMedia = 11;
         String asignaturaDificil = "";
-        for (int asignaturas = 0; asignaturas < asignatura.length; asignaturas++) {
+        for (int asignaturas = 0; asignaturas < asignatura.length; asignaturas++) { // Recorrer asignaturas.
             int mediaAsignatura = 0;
-            for (int alumnos = 0; alumnos < alumno.length; alumnos++) {
+            for (int alumnos = 0; alumnos < alumno.length; alumnos++) { // Recorrer alumnos y acumular las notas para esa asignatura.
                 mediaAsignatura += nota[asignaturas][alumnos];
             }
-            mediaAsignatura = mediaAsignatura / alumno.length;
-            if (mediaAsignatura < peorMedia) {
+            mediaAsignatura = mediaAsignatura / alumno.length; // Calcular media de la asignatura (total de notas entre numero de alumnos)
+            if (mediaAsignatura < peorMedia) { // Si la media de la asignatura es peor que la de asignatura anterior se establece como la peor y se guarda el nombre de la asignatura en una variable.
                 peorMedia = mediaAsignatura;
                 asignaturaDificil = asignatura[asignaturas];
             }
