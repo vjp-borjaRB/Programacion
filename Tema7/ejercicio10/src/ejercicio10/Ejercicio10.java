@@ -6,7 +6,7 @@ package ejercicio10;
  */
 public class Ejercicio10 {
 
-    public static void rellenarAleatorios(int[] vector) { // Generar 10 números aleatorios dentre 1 y 8 y añadirlos al array.
+    public static void rellenarAleatorios(int[] vector) { // Generar 10 números aleatorios entre 1 y 8 y añadirlos al array.
         for (int i = 0; i < vector.length; i++) {
             int aleatorio = (int) (Math.random() * 8) + 1;
             vector[i] = aleatorio;

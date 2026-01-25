@@ -63,7 +63,7 @@ public class Ejercicio15 {
     public static void rellenarArray(int[] ventasCoches) { // Añadir número aleatorios al array.
         int nventas;
         for (int i = 0; i < ventasCoches.length; i++) {
-            nventas = (int) (Math.random() * 91) + 10; // Generar un numero aleatorio entre 10 y 100.
+            nventas = (int) (Math.random() * 91) + 10; // Generar un número aleatorio entre 10 y 100.
             ventasCoches[i] = nventas; // Añadir el número aleatorio al array.
         }
     }
@@ -93,7 +93,7 @@ public class Ejercicio15 {
     public static void ventasMesesPares(int[] ventasCoches) { // Mostrar el total de ventas de los meses pares.
         int totalVentasPares = 0;
         for (int i = 0; i < ventasCoches.length; i++) {
-            if (i % 2 != 0) { // Si el módulo de la posicion del mes en el array es distinta de 0 (la posición es impar) acumular ventasCoches[i] en totalVentasPares.
+            if (i % 2 != 0) { // Si el módulo de la posición del mes en el array es distinta de 0 (la posición es impar) acumular ventasCoches[i] en totalVentasPares.
                 totalVentasPares += ventasCoches[i];
             }
         }

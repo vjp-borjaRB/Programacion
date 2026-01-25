@@ -77,7 +77,7 @@ public class Ejercicio16 {
         }
     }
 
-    public static void mejorAlumno(String[] alumno, String[] asignatura, int[][] nota) { // Mostrar nombre del alumno con la nota media mas alta.
+    public static void mejorAlumno(String[] alumno, String[] asignatura, int[][] nota) { // Mostrar nombre del alumno con la nota media más alta.
         int mediaMax = 0;
         String mejorAlumno = "";
         for (int alumnos = 0; alumnos < alumno.length; alumnos++) {
@@ -100,11 +100,11 @@ public class Ejercicio16 {
         for (int alumnos = 0; alumnos < alumno.length; alumnos++) { // Recorrer alumnos.
             int nsuspensos = 0;
             for (int asignaturas = 0; asignaturas < asignatura.length; asignaturas++) { // Recorrer asignaturas.
-                if (nota[asignaturas][alumnos] < 5) { // Si la nota de la asignatura es suspoenso, se incrementa el número de suspensos.
+                if (nota[asignaturas][alumnos] < 5) { // Si la nota de la asignatura es suspenso, se incrementa el número de suspensos.
                     nsuspensos++;
                 }
             }
-            if (nsuspensos > maxSuspensos) { // Si el numero de suspensos del alumno es mayor que el numero máximo de suspensos, se establece como máximo y se guarda el nombre del alumno en una variable.
+            if (nsuspensos > maxSuspensos) { // Si el número de suspensos del alumno es mayor que el número máximo de suspensos, se establece como máximo y se guarda el nombre del alumno en una variable.
                 maxSuspensos = nsuspensos;
                 peorAlumno = alumno[alumnos];
             }
@@ -120,7 +120,7 @@ public class Ejercicio16 {
             for (int alumnos = 0; alumnos < alumno.length; alumnos++) { // Recorrer alumnos y acumular las notas para esa asignatura.
                 mediaAsignatura += nota[asignaturas][alumnos];
             }
-            mediaAsignatura = mediaAsignatura / alumno.length; // Calcular media de la asignatura (total de notas entre numero de alumnos)
+            mediaAsignatura = mediaAsignatura / alumno.length; // Calcular media de la asignatura (total de notas entre número de alumnos)
             if (mediaAsignatura < peorMedia) { // Si la media de la asignatura es peor que la de asignatura anterior se establece como la peor y se guarda el nombre de la asignatura en una variable.
                 peorMedia = mediaAsignatura;
                 asignaturaDificil = asignatura[asignaturas];
