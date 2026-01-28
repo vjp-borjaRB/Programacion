@@ -8,8 +8,8 @@ public class Asignatura {
 
 //Constructores
     public Asignatura() {
-        String nombre = "";
-        double nota = 0;
+        nombre = "";
+        nota = 0;
     }
 
     public Asignatura(String nombre, double nota) {
