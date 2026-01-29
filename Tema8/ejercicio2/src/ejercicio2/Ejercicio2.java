@@ -49,5 +49,4 @@ public class Ejercicio2 {
         } while (!valida);
         return longitud;
     }
-
 }
