@@ -44,7 +44,7 @@ public class Ejercicio2 {
                 }
             } catch (InputMismatchException e) {
                 System.err.println("Introduce un numero entero del 1 al 10");
-                entrada.nextLine();
+                entrada.nextLine(); // Limpiar buffer 
             }
         } while (!valida);
         return longitud;
