@@ -10,9 +10,8 @@ public class Ejercicio11 {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        Mueble mueble1 = new Mueble();
-        Mueble mueble2 = new Mueble(456, "Estanteria");
         Mueble[] vectorMuebles = new Mueble[4];
+        mostrarMenu(vectorMuebles, entrada);
     }
 
     public static void implementarSentencias(Mueble mueble1, Mueble mueble2) {
@@ -23,7 +22,8 @@ public class Ejercicio11 {
     public static void mostrarOpciones() {
         System.out.println("1. Rellenar muebles");
         System.out.println("2. Mostrar muebles");
-        System.out.println("3.  Mostrar muebles por precio ");
+        System.out.println("3.  Mostrar muebles por precio");
+        System.out.println("4. Salir del programa");
     }
 
     public static int pedirOpcion(Scanner entrada) {
@@ -60,12 +60,17 @@ public class Ejercicio11 {
             mostrarOpciones();
             menu = pedirOpcion(entrada);
             switch (menu) {
-                case 1 ->
+                case 1 -> {
                     rellenarMuebles(vectorMuebles);
-                case 2 ->
+                }
+                case 2 -> {
                     mostrarMuebles(vectorMuebles);
-                case 3 ->
+                }
+                case 3 -> {
                     filtrarPrecio(vectorMuebles, entrada);
+                }
+                case 4 -> {
+                }
             }
         } while (menu != 4);
     }
