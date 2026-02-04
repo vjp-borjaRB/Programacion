@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  *
- * @author Borja Romero
+ * @author 
  */
 public class Alumno {
     

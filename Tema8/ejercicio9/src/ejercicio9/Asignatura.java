@@ -2,7 +2,7 @@ package ejercicio9;
 
 /**
  *
- * @author Borja Romero
+ * @author 
  */
 public class Asignatura {
 
