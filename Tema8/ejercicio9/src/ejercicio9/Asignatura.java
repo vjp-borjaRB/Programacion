@@ -2,7 +2,7 @@ package ejercicio9;
 
 /**
  *
- * @author 
+ * @author
  */
 public class Asignatura {
 
@@ -38,6 +38,25 @@ public class Asignatura {
     @Override
     public String toString() {
         return "Asignatura{" + "nombreAsignatura=" + nombreAsignatura + ", nota=" + nota + '}';
+    }
+
+    // Otros métodos
+    public static void asignaturaDificil(Alumno[] alumno, String[] nombreAsignaturas) {
+        String asigDificil = "";
+        float mediaMinima = 11;
+        for (int i = 0; i < nombreAsignaturas.length; i++) {
+            float suma = 0;
+            float media = 0;
+            for (int j = 0; j < alumno.length; j++) {
+                suma += alumno[j].getNotas()[i].nota;
+            }
+            media = suma / nombreAsignaturas.length;
+            if (media < mediaMinima) {
+                mediaMinima = media;
+                asigDificil = nombreAsignaturas[i];
+            }
+        }
+        System.out.println(asigDificil);
     }
 
 }
