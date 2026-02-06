@@ -2,7 +2,7 @@ package ejercicio15;
 
 /**
  *
- * @author Borja Romero
+ * @author 
  */
 public class Socio {
 
