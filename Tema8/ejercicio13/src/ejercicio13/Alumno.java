@@ -15,7 +15,7 @@ public class Alumno {
     public Alumno() {
         nombre = "";
         edad = 0;
-        notaMedia = 0.00f;
+        notaMedia = 0;
     }
 
     public Alumno(String nombre, int edad, float notaMedia) {

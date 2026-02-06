@@ -7,12 +7,12 @@ import java.util.Scanner;
  * @author Borja Romero
  */
 public class Ejercicio13 {
-    
+
     public static void main(String[] args) {
         Alumno[] alumnos = new Alumno[5];
         mostrarMenu(alumnos);
     }
-    
+
     public static void mostrarMenu(Alumno[] alumnos) {
         int menu;
         do {
@@ -41,7 +41,7 @@ public class Ejercicio13 {
             }
         } while (menu != 6);
     }
-    
+
     public static void mostrarOpciones() {
         System.out.println("1. Rellenar un alumno");
         System.out.println("2. Mostrar vector alumnos");
@@ -50,14 +50,14 @@ public class Ejercicio13 {
         System.out.println("5. Buscar alumnos");
         System.out.println("6. Salir del programa");
     }
-    
+
     public static int pedirInt() {
         Scanner entrada = new Scanner(System.in);
         int entero;
         entero = entrada.nextInt();
         return entero;
     }
-    
+
     public static int pedirEdad() {
         Scanner entrada = new Scanner(System.in);
         int edad;
@@ -65,7 +65,7 @@ public class Ejercicio13 {
         edad = entrada.nextInt();
         return edad;
     }
-    
+
     public static float pedirMedia() {
         Scanner entrada = new Scanner(System.in);
         float notaMedia;
@@ -73,7 +73,7 @@ public class Ejercicio13 {
         notaMedia = entrada.nextFloat();
         return notaMedia;
     }
-    
+
     public static String pedirNombre() {
         Scanner entrada = new Scanner(System.in);
         String nombre;
@@ -81,7 +81,7 @@ public class Ejercicio13 {
         nombre = entrada.nextLine();
         return nombre;
     }
-    
+
     public static void rellenarAlumno(Alumno[] alumnos) {
         boolean libre = false;
         do {
