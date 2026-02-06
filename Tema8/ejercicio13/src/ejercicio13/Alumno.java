@@ -85,12 +85,16 @@ public class Alumno {
     }
 
     public static void buscarAlumno(Alumno[] alumnos, String nombre) {
-        for (Alumno alumno : alumnos) {
-            if (alumno != null) {
-                if (alumno.nombre.equalsIgnoreCase(nombre)) {
-                    System.out.println(alumno.nombre + " esta matriculado");
+        int i = 0;
+        boolean nombreEncontrado = false;
+        while (i < alumnos.length && !nombreEncontrado) {
+            if (alumnos[i] != null) {
+                if (alumnos[i].nombre.equalsIgnoreCase(nombre)) {
+                    System.out.println("El alumno " + alumnos[i].nombre + " esta matriculado");
+                    nombreEncontrado = true;
                 }
             }
+            i++;
         }
     }
 }

@@ -92,4 +92,46 @@ public class Pelicula {
         }
         System.out.println(masRentable);
     }
+
+    public static void menosRentable(Pelicula[] peliculas) {
+        String masRentable = "";
+        float totalMenosRentable = 3000;
+        float beneficioNeto;
+        for (int i = 0; i < peliculas.length; i++) {
+            float suma = 0;
+            for (int j = 0; j < peliculas[i].socios.length; j++) {
+                suma += peliculas[i].socios[j].getPrecioAbonado();
+            }
+            beneficioNeto = suma - peliculas[i].costeLincencia;
+            if (beneficioNeto < totalMenosRentable) {
+                totalMenosRentable = beneficioNeto;
+                masRentable = peliculas[i].titulo;
+            }
+        }
+        System.out.println(masRentable);
+    }
+
+    public static void peliculaPorNombre(Pelicula[] peliculas, String nombre) {
+        float suma = 0;
+        float beneficioNeto;
+        int i = 0;
+        int posicion;
+        boolean encontrada = false;
+        while (i < peliculas.length && !encontrada) {
+            if (peliculas[i].titulo.equalsIgnoreCase(nombre)) {
+                posicion = i;
+                encontrada = true;
+                for (int j = 0; j < peliculas[posicion].socios.length; j++) {
+                    suma += peliculas[posicion].socios[j].getPrecioAbonado();
+                }
+                beneficioNeto = suma - peliculas[posicion].costeLincencia;
+                System.out.println(Arrays.toString(peliculas[posicion].socios));
+                System.out.println(beneficioNeto);
+            } else {
+                System.err.println("No se ha encontrado una pelicula con ese nombre");
+            }
+            i++;
+        }
+    }
+
 }
