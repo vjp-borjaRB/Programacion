@@ -15,7 +15,7 @@ public class Alumno {
     public Alumno() {
         nombre = "";
         edad = 0;
-        notaMedia = 0.2f;
+        notaMedia = 0.00f;
     }
 
     public Alumno(String nombre, int edad, float notaMedia) {
@@ -55,4 +55,42 @@ public class Alumno {
         return "Alumno{" + "nombre=" + nombre + ", edad=" + edad + ", notaMedia=" + notaMedia + '}';
     }
 
+    // Otros métodos
+    public static void mostrarAlumnos(Alumno[] alumnos) {
+        for (Alumno alumno : alumnos) {
+            if (alumno != null) {
+                System.out.println(alumno);
+            }
+        }
+    }
+
+    public static void alumnosPorNota(Alumno[] alumnos, float nota) {
+        for (Alumno alumno : alumnos) {
+            if (alumno != null) {
+                if (alumno.notaMedia > nota) {
+                    System.out.println(alumno);
+                }
+            }
+        }
+    }
+
+    public static void alumnosMediaSuspensa(Alumno[] alumnos) {
+        for (Alumno alumno : alumnos) {
+            if (alumno != null) {
+                if (alumno.notaMedia < 5) {
+                    System.out.println(alumno);
+                }
+            }
+        }
+    }
+
+    public static void buscarAlumno(Alumno[] alumnos, String nombre) {
+        for (Alumno alumno : alumnos) {
+            if (alumno != null) {
+                if (alumno.nombre.equalsIgnoreCase(nombre)) {
+                    System.out.println(alumno.nombre + " esta matriculado");
+                }
+            }
+        }
+    }
 }

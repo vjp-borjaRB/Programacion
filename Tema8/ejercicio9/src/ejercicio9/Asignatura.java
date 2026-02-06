@@ -46,7 +46,7 @@ public class Asignatura {
         float mediaMinima = 11;
         for (int i = 0; i < nombreAsignaturas.length; i++) {
             float suma = 0;
-            float media = 0;
+            float media;
             for (int j = 0; j < alumno.length; j++) {
                 suma += alumno[j].getNotas()[i].nota;
             }
