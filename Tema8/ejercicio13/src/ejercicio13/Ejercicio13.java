@@ -67,7 +67,7 @@ public class Ejercicio13 {
             System.out.println("Introduce la nota media");
             float media = pedirFloat(entrada);
             try {
-                creado = comprobarPosicion(alumnos, posicion, nombre, edad, media);
+                creado = comprobarPosicion(alumnos, posicion, nombre, edad, media); // Almacena en creado true o false, si es false se vuelven a pedir todos los datos.
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.err.println("Fuera de los limites del array (0 a 4)");
             }
