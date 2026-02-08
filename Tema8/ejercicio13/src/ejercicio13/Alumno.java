@@ -50,51 +50,10 @@ public class Alumno {
     }
 
     // Mostrar / toString
+
     @Override
     public String toString() {
-        return "Alumno{" + "nombre=" + nombre + ", edad=" + edad + ", notaMedia=" + notaMedia + '}';
+        return nombre + " edad -> " + edad + " notaMedia -> " + notaMedia;
     }
 
-    // Otros métodos
-    public static void mostrarAlumnos(Alumno[] alumnos) {
-        for (Alumno alumno : alumnos) {
-            if (alumno != null) {
-                System.out.println(alumno);
-            }
-        }
-    }
-
-    public static void alumnosPorNota(Alumno[] alumnos, float nota) {
-        for (Alumno alumno : alumnos) {
-            if (alumno != null) {
-                if (alumno.notaMedia > nota) {
-                    System.out.println(alumno);
-                }
-            }
-        }
-    }
-
-    public static void alumnosMediaSuspensa(Alumno[] alumnos) {
-        for (Alumno alumno : alumnos) {
-            if (alumno != null) {
-                if (alumno.notaMedia < 5) {
-                    System.out.println(alumno);
-                }
-            }
-        }
-    }
-
-    public static void buscarAlumno(Alumno[] alumnos, String nombre) {
-        int i = 0;
-        boolean nombreEncontrado = false;
-        while (i < alumnos.length && !nombreEncontrado) {
-            if (alumnos[i] != null) {
-                if (alumnos[i].nombre.equalsIgnoreCase(nombre)) {
-                    System.out.println("El alumno " + alumnos[i].nombre + " esta matriculado");
-                    nombreEncontrado = true;
-                }
-            }
-            i++;
-        }
-    }
 }

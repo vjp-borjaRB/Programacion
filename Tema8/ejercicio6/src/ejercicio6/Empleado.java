@@ -52,13 +52,29 @@ public class Empleado {
     // Mostrar / toString
     @Override
     public String toString() {
-        return "Empleado{" + "nombre=" + nombre + ", nhoras=" + nhoras + ", tarifa=" + tarifa + '}';
+        return """
+               Empleado
+               Nombre-> """ + nombre + ", nhoras-> " + nhoras + ", tarifa-> " + tarifa + '}';
     }
 
     // Otros métodos
     public double calcularSalario() {
         double salario;
-        salario = nhoras * tarifa;
+        double horasExtra;
+        if (nhoras > 40) {
+            horasExtra = nhoras - 40;
+            salario = 40 * tarifa + horasExtra * tarifa * 1.5;
+        } else {
+            salario = nhoras * tarifa;
+        }
         return salario;
+    }
+
+    public void mostrarDatosEmpleado() {
+        System.out.println(nombre + " trabajo " + nhoras
+                + " horas, cobra " + tarifa
+                + " euros la hora por lo que le corresponde un salario de "
+                + calcularSalario());
+
     }
 }

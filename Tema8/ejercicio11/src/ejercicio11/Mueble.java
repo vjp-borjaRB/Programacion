@@ -6,9 +6,11 @@ package ejercicio11;
  */
 public class Mueble {
 
+    // Atributos
     private double precio;
     private String descripcion;
 
+    // Constructores
     public Mueble() {
         precio = 0;
         descripcion = "";
@@ -19,6 +21,7 @@ public class Mueble {
         this.descripcion = descripcion;
     }
 
+    // Get & Set
     public double getPrecio() {
         return precio;
     }
@@ -35,9 +38,10 @@ public class Mueble {
         this.descripcion = descripcion;
     }
 
+    // Mostrar / toString
     @Override
     public String toString() {
-        return "Mueble{" + "precio=" + precio + ", descripcion=" + descripcion + '}';
+        return "Precio -> " + precio + " Descripcion -> " + descripcion;
     }
 
 }
