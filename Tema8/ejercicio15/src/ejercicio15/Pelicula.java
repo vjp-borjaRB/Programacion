@@ -115,7 +115,7 @@ public class Pelicula {
         float suma = 0;
         float beneficioNeto;
         int i = 0;
-        int posicion;
+        int posicion = 0;
         boolean encontrada = false;
         while (i < peliculas.length && !encontrada) {
             if (peliculas[i].titulo.equalsIgnoreCase(nombre)) {
@@ -127,10 +127,12 @@ public class Pelicula {
                 beneficioNeto = suma - peliculas[posicion].costeLincencia;
                 System.out.println(Arrays.toString(peliculas[posicion].socios));
                 System.out.println(beneficioNeto);
-            } else {
-                System.err.println("No se ha encontrado una pelicula con ese nombre");
+
             }
             i++;
+        }
+        if (!encontrada) {
+            System.err.println("No hay datos para " + nombre);
         }
     }
 
