@@ -22,7 +22,7 @@ public class Ejercicio13 {
             menu = pedirEntero(entrada);
             switch (menu) {
                 case 1 -> {
-                    rellenarAlumnos(alumnos, entrada);
+                    rellenarAlumno(alumnos, entrada);
                 }
                 case 2 -> {
                     mostrarAlumnos(alumnos);
@@ -55,7 +55,7 @@ public class Ejercicio13 {
         System.out.println("6. Salir del programa");
     }
 
-    public static void rellenarAlumnos(Alumno[] alumnos, Scanner entrada) {
+    public static void rellenarAlumno(Alumno[] alumnos, Scanner entrada) {
         boolean creado = false;
         do {
             System.out.println("Introduce posicion en el array: ");
