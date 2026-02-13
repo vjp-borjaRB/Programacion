@@ -18,7 +18,5 @@ public class Ejercicio7 {
         for (int i = fraseDividida.length; i > 0; i--) {
             System.out.println(fraseDividida[i]);
         }
-
     }
-
 }
