@@ -35,20 +35,20 @@ public class Ejercicio4 {
     }
 
     public static void sustituirRepetidos(ArrayList<Integer> lista) {
-        ArrayList<Integer> listaAux = new ArrayList(); // Crear lista para almacenar los numeros que se repiten
+        ArrayList<Integer> listaAux = new ArrayList(); // Crear lista para almacenar los numeros que se repiten.
         for (int i = 0; i < lista.size(); i++) {
             int contador = 0;
             for (int j = 0; j < lista.size(); j++) {
-                if (lista.get(j).equals(lista.get(i))) { // Cuenta las apariciones del numero en la lista
+                if (lista.get(j).equals(lista.get(i))) { // Cuenta las apariciones del numero en la lista.
                     contador++;
                 }
             }
             if (contador >= 2) {
-                listaAux.add(lista.get(i)); // Si el numero aparece dos o más veces se guarda en la lista Auxiliar
+                listaAux.add(i); // Si el numero aparece dos o más veces se guarda el índice en la lista auxiliar.
             }
         }
         for (int i = 0; i < lista.size(); i++) {
-            if (listaAux.contains(lista.get(i))) { // Si el numero coincide con alguno de los almacenados en la lista, se pone a 0
+            if (listaAux.contains(i)) { // Si la lista auxiliar contiene ese índice se pone el elemento a 0.
                 lista.set(i, 0);
             }
         }
