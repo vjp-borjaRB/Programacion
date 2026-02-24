@@ -26,7 +26,7 @@ public class Ejercicio3 {
                     rellenarLista(entrada, lista);
                 }
                 case 2 -> {
-                    mostarLista(lista);
+                    mostrarLista(lista);
                 }
                 case 3 -> {
                     intercambiarPosiciones(lista);
@@ -75,7 +75,7 @@ public class Ejercicio3 {
         } while (continuar);
     }
 
-    public static void mostarLista(ArrayList<Integer> lista) {
+    public static void mostrarLista(ArrayList<Integer> lista) {
         for (int i = 0; i < lista.size(); i++) {
             System.out.println(lista.get(i));
         }
