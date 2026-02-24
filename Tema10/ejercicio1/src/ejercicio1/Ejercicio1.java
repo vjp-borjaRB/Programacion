@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author Borja Romero
  */
 public class Ejercicio1 {
-    
+
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         ArrayList<String> lista;
@@ -16,13 +16,13 @@ public class Ejercicio1 {
         rellenarLista(entrada, lista);
         mostarLista(lista);
     }
-    
+
     public static String pedirString(Scanner entrada) {
         String cadena;
         cadena = entrada.nextLine();
         return cadena;
     }
-    
+
     public static void rellenarLista(Scanner entrada, ArrayList<String> lista) {
         boolean continuar = false;
         String respuesta;
@@ -40,7 +40,7 @@ public class Ejercicio1 {
             }
         } while (continuar);
     }
-    
+
     public static void mostarLista(ArrayList<String> lista) {
         for (int i = 0; i < lista.size(); i++) {
             System.out.println(lista.get(i));
