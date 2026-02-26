@@ -92,7 +92,7 @@ public class Ejercicio5 {
 
     public static void intercambiarPosiciones(ArrayList<Integer> listaEnteros, int mayorPar, int menorImpar) {
         int numeroEntero;
-        for (int i = 0; i < listaEnteros.size(); i++) {
+        for (int i = 0; i < listaEnteros.size(); i++) { // Mejor con un while (i<lista.size() && !encontrado)
             numeroEntero = listaEnteros.get(i);
             if (numeroEntero == mayorPar) {
                 listaEnteros.set(i, menorImpar);
