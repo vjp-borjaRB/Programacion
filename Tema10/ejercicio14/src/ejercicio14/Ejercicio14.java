@@ -36,6 +36,7 @@ public class Ejercicio14 {
                     mostrarAlummnos(lista);
                 }
                 case 3 -> {
+                    mejorMedia(lista);
                 }
                 case 4 -> {
                 }
@@ -69,6 +70,30 @@ public class Ejercicio14 {
     public static void mostrarAlummnos(ArrayList<Alumno> lista) {
         for (int i = 0; i < lista.size(); i++) {
             System.out.println(lista.get(i));
+        }
+    }
+
+    public static void mejorMedia(ArrayList<Alumno> lista) {
+        float mejorMedia = 0;
+        String nombreAlumno = "";
+        for (int i = 0; i < lista.size(); i++) {
+            float suma = 0;
+            for (int j = 0; j < lista.get(i).getNotas().length; j++) {
+                suma += lista.get(i).getNotas()[j].getNota();
+            }
+            if (suma > mejorMedia) {
+                mejorMedia = suma;
+                nombreAlumno = lista.get(i).getNombre();
+            }
+        }
+        System.out.println("El alumno con mejor media es: " + nombreAlumno + " con " + mejorMedia / 3);
+    }
+
+    public static void asignaturaDificil(ArrayList<Alumno> lista) {
+        for (int i = 0; i < lista.size(); i++) {
+            for (int j = 0; j < lista.get(i).getNotas().length; j++) {
+            
+            }
         }
     }
 
