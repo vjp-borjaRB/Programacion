@@ -43,8 +43,4 @@ public class Asignatura {
     public String toString() {
         return "Asignatura{" + "nombre=" + nombre + ", nota=" + nota + '}';
     }
-    
-    // Otros métodos
-    
-
 }

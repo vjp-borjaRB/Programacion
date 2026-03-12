@@ -33,12 +33,13 @@ public class Ejercicio14 {
                     crearAlumno(lista, nombreAsignatura);
                 }
                 case 2 -> {
-                    mostrarAlummnos(lista);
+                    Alumno.mostrarAlummnos(lista);
                 }
                 case 3 -> {
-                    mejorMedia(lista);
+                    Alumno.mejorMedia(lista);
                 }
                 case 4 -> {
+                    Alumno.asignaturaDificil(lista);
                 }
                 case 5 -> {
                 }
@@ -67,40 +68,10 @@ public class Ejercicio14 {
         } while (!finalizar);
     }
 
-    public static void mostrarAlummnos(ArrayList<Alumno> lista) {
-        for (int i = 0; i < lista.size(); i++) {
-            System.out.println(lista.get(i));
-        }
-    }
-
-    public static void mejorMedia(ArrayList<Alumno> lista) {
-        float mejorMedia = 0;
-        String nombreAlumno = "";
-        for (int i = 0; i < lista.size(); i++) {
-            float suma = 0;
-            for (int j = 0; j < lista.get(i).getNotas().length; j++) {
-                suma += lista.get(i).getNotas()[j].getNota();
-            }
-            if (suma > mejorMedia) {
-                mejorMedia = suma;
-                nombreAlumno = lista.get(i).getNombre();
-            }
-        }
-        System.out.println("El alumno con mejor media es: " + nombreAlumno + " con " + mejorMedia / 3);
-    }
-
-    public static void asignaturaDificil(ArrayList<Alumno> lista) {
-        for (int i = 0; i < lista.size(); i++) {
-            for (int j = 0; j < lista.get(i).getNotas().length; j++) {
-            
-            }
-        }
-    }
-
     public static boolean finalizar() {
-        boolean valida = false;
-        boolean finalizar = false;
-        while (!valida) {
+        boolean valida, finalizar;
+        finalizar = false;
+        do {
             System.out.println("Desea continuar creando alumnos?");
             String respuesta = pedirString();
             if (respuesta.equalsIgnoreCase("Si")) {
@@ -113,7 +84,7 @@ public class Ejercicio14 {
                 System.err.println("Respuesta no valida (Si/No)");
                 valida = false;
             }
-        }
+        } while (!valida);
         return finalizar;
     }
 

@@ -64,7 +64,7 @@ public class Ejercicio5 {
         }
     }
 
-    public static int mayorPar(ArrayList<Integer> listaEnteros) {
+    public static int mayorPar(ArrayList<Integer> listaEnteros) { // Devuelve el mayor numero par de la lista
         int mayorPar = Integer.MIN_VALUE;
         int numeroEntero;
         for (int i = 0; i < listaEnteros.size(); i++) {
@@ -77,7 +77,7 @@ public class Ejercicio5 {
         return mayorPar;
     }
 
-    public static int menorImpar(ArrayList<Integer> listaEnteros) {
+    public static int menorImpar(ArrayList<Integer> listaEnteros) { // Devuelve el menor numero impar de la lista
         int menorImpar = Integer.MAX_VALUE;
         int numeroEntero;
         for (int i = 0; i < listaEnteros.size(); i++) {
