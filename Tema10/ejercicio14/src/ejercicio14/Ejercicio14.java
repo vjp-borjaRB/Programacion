@@ -44,7 +44,6 @@ public class Ejercicio14 {
                 case 5 -> {
                 }
             }
-
         } while (menu != 5);
     }
 

@@ -91,15 +91,25 @@ public class Ejercicio5 {
     }
 
     public static void intercambiarPosiciones(ArrayList<Integer> listaEnteros, int mayorPar, int menorImpar) {
-        int numeroEntero;
-        for (int i = 0; i < listaEnteros.size(); i++) { // Mejor con un while (i<lista.size() && !encontrado)
-            numeroEntero = listaEnteros.get(i);
+        int i = 0;
+        boolean encontrado = false;
+        boolean menor = false;
+        boolean mayor = false;
+
+        while (i < listaEnteros.size() && !encontrado) {
+            int numeroEntero = listaEnteros.get(i);
             if (numeroEntero == mayorPar) {
                 listaEnteros.set(i, menorImpar);
+                mayor = true;
             }
             if (numeroEntero == menorImpar) {
                 listaEnteros.set(i, mayorPar);
+                menor = true;
             }
+            if (mayor && menor) {
+                encontrado = true;
+            }
+            i++;
         }
     }
 }

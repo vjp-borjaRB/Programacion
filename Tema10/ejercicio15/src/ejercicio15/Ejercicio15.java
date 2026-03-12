@@ -104,7 +104,6 @@ public class Ejercicio15 {
         String cadena;
         cadena = entradaString.nextLine();
         return cadena;
-
     }
 
 }
