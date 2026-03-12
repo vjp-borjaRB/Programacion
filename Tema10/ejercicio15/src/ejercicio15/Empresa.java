@@ -69,7 +69,7 @@ public class Empresa {
         ArrayList<Empleado> listaEmpleados = new ArrayList();
         for (int i = 0; i < listaEmpresas.size(); i++) { // Volcar empleados a una lista auxiliar
             for (int j = 0; j < listaEmpresas.get(i).getEmpleados().size(); j++) {
-                listaEmpleados.add(listaEmpresas.get(i).getEmpleados().get(j));
+                listaEmpleados.add(listaEmpresas.get(i).getEmpleados().get(j)); // Mejor usar addAll para no recorrer cada ArrayList de empleados
             }
         }
         for (int i = 0; i < listaEmpleados.size(); i++) { // Recorrer la lista de empleados y comparar 2 a 2 ordenando por sueldo

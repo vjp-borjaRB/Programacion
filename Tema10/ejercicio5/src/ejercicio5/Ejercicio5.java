@@ -65,7 +65,7 @@ public class Ejercicio5 {
     }
 
     public static int mayorPar(ArrayList<Integer> listaEnteros) { // Devuelve el mayor numero par de la lista
-        int mayorPar = Integer.MIN_VALUE;
+        int mayorPar = listaEnteros.getFirst();
         int numeroEntero;
         for (int i = 0; i < listaEnteros.size(); i++) {
             numeroEntero = listaEnteros.get(i);
@@ -78,7 +78,7 @@ public class Ejercicio5 {
     }
 
     public static int menorImpar(ArrayList<Integer> listaEnteros) { // Devuelve el menor numero impar de la lista
-        int menorImpar = Integer.MAX_VALUE;
+        int menorImpar = listaEnteros.getFirst();
         int numeroEntero;
         for (int i = 0; i < listaEnteros.size(); i++) {
             numeroEntero = listaEnteros.get(i);
@@ -98,15 +98,15 @@ public class Ejercicio5 {
 
         while (i < listaEnteros.size() && !encontrado) {
             int numeroEntero = listaEnteros.get(i);
-            if (numeroEntero == mayorPar) {
+            if (numeroEntero == mayorPar) { // Si el numero coincide con el mayorPar introducido se establece como menorImpar
                 listaEnteros.set(i, menorImpar);
                 mayor = true;
             }
-            if (numeroEntero == menorImpar) {
+            if (numeroEntero == menorImpar) { // Lo mismo que en el caso anterior pero con mayorPar
                 listaEnteros.set(i, mayorPar);
                 menor = true;
             }
-            if (mayor && menor) {
+            if (mayor && menor) { // If para comprobar si se han intercambiado los dos, si es así sale del bucle
                 encontrado = true;
             }
             i++;
