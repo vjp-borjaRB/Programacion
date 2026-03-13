@@ -43,7 +43,6 @@ public class Ejercicio12 {
                 valida = false;
                 System.err.println("Introduce una respuesta valida");
             }
-
         } while (!valida);
         return continuar;
     }
