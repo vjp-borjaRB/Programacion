@@ -161,7 +161,7 @@ public class Ejercicio16 {
             while (iterador.hasNext() || !encontrado) {
                 Producto producto = iterador.next();
                 if (producto.getNombre().equalsIgnoreCase(nombre)) {
-                    if (cantidad < producto.getStock()) {
+                    if (cantidad <= producto.getStock()) {
                         total += producto.getPrecio() * cantidad;
                         producto.setStock(producto.getStock() - cantidad);
                     } else {
