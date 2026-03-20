@@ -31,8 +31,14 @@ public class Ejercicio6 {
             menu = pedirInt();
             switch (menu) {
                 case 1 -> {
+                    System.out.print("Introduce el nombre del donante:");
+                    String nombre = pedirString();
+                    System.out.print("Introduce la cantidad: ");
+                    float cantidad = pedirFloat();
+                    campania1.addDonacion(nombre, cantidad);
                 }
                 case 2 -> {
+                    campania1.mostrarDonaciones(campania1);
                 }
                 case 3 -> {
                 }
@@ -48,13 +54,21 @@ public class Ejercicio6 {
         } while (menu != 7);
     }
 
-    public static void addDonacion() {
-    
-    }    
-    
     public static int pedirInt() {
         Scanner entradaInt = new Scanner(System.in);
         int entero = entradaInt.nextInt();
         return entero;
+    }
+
+    public static String pedirString() {
+        Scanner entradaString = new Scanner(System.in);
+        String cadena = entradaString.nextLine();
+        return cadena;
+    }
+
+    public static float pedirFloat() {
+        Scanner entradaFloat = new Scanner(System.in);
+        float comaFlotante = entradaFloat.nextFloat();
+        return comaFlotante;
     }
 }

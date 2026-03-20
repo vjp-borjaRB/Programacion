@@ -4,7 +4,7 @@ package ejercicio6;
  *
  * @author Borja Romero
  */
-public class Donacion {
+public class Donacion implements Comparable<Donacion> {
 
     private String nombre;
     private float cantidad;
@@ -38,5 +38,16 @@ public class Donacion {
     @Override
     public String toString() {
         return "Donacion{" + "nombre=" + nombre + ", cantidad=" + cantidad + '}';
+    }
+
+    @Override
+    public int compareTo(Donacion o) {
+        if (this.cantidad > o.cantidad) {
+            return 1;
+        } else if (this.cantidad < o.cantidad) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }

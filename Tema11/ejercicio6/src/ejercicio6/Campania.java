@@ -1,22 +1,22 @@
 package ejercicio6;
 
-import java.util.TreeSet;
+import java.util.HashSet;
 
 /**
  *
  * @author Borja Romero
  */
-public class Campania implements Comparable<Donacion> {
+public class Campania {
 
     private String nombre;
-    private TreeSet<Donacion> conjunto;
+    private HashSet<Donacion> conjunto;
 
     public Campania() {
         nombre = "";
-        conjunto = new TreeSet<>();
+        conjunto = new HashSet<>();
     }
 
-    public Campania(String nombre, TreeSet<Donacion> conjunto) {
+    public Campania(String nombre, HashSet<Donacion> conjunto) {
         this.nombre = nombre;
         this.conjunto = conjunto;
     }
@@ -25,7 +25,7 @@ public class Campania implements Comparable<Donacion> {
         return nombre;
     }
 
-    public TreeSet<Donacion> getConjunto() {
+    public HashSet<Donacion> getConjunto() {
         return conjunto;
     }
 
@@ -33,7 +33,7 @@ public class Campania implements Comparable<Donacion> {
         this.nombre = nombre;
     }
 
-    public void setConjunto(TreeSet<Donacion> conjunto) {
+    public void setConjunto(HashSet<Donacion> conjunto) {
         this.conjunto = conjunto;
     }
 
@@ -42,8 +42,20 @@ public class Campania implements Comparable<Donacion> {
         return "Campania{" + "nombre=" + nombre + ", conjunto=" + conjunto + '}';
     }
 
-    @Override
-    public int compareTo(Donacion o) {
-        
+    public void addDonacion(String nombre, float cantidad) {
+        Donacion donacion = new Donacion(nombre, cantidad);
+        conjunto.add(donacion);
+    }
+
+    public void mostrarDonaciones(Campania campania) {
+        for (int i = 0; i < conjunto.size(); i++) {
+            System.out.println(conjunto);
+        }
+    }
+    
+    public void donacionesPorNombre(String nombre) {
+        for (int i = 0; i < conjunto.size(); i++) {
+            if (conjunto.)
+        }
     }
 }
