@@ -47,9 +47,16 @@ public class Campania implements Comparable<Campania> {
         return "Campania{" + "nombre=" + nombre + ", donaciones=" + donaciones + '}';
     }
 
+    public static void mostrarCampaniasDonaciones(HashSet<Campania> campanias) {
+        for (Campania c : campanias) {
+            System.out.println("CAMPANIA " + c.nombre);
+            Donacion.mostrarDonaciones(c.donaciones);
+        }
+    }
+
     @Override
     public int compareTo(Campania o) {
         return this.nombre.compareToIgnoreCase(o.nombre);
     }
-    
+
 }

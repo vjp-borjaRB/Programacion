@@ -1,5 +1,7 @@
 package ejercicio7;
 
+import java.util.HashSet;
+
 /**
  *
  * @author Borja Romero
@@ -40,4 +42,11 @@ public class Donacion {
         return "Donacion{" + "nombre=" + nombre + ", cantidad=" + cantidad + '}';
     }
 
+    public static void mostrarDonaciones(HashSet<Donacion> donaciones) {
+        for (Donacion d : donaciones) {
+            System.out.println("\tDONACION");
+            System.out.println("\tNombre -> " + d.nombre);
+            System.out.println("\tCantidad -> " + d.cantidad);
+        }
+    }
 }

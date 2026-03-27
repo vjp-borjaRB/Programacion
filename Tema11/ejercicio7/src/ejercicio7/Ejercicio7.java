@@ -13,12 +13,12 @@ import java.util.Collections;
  * @author Borja Romero
  */
 public class Ejercicio7 {
-
+    
     public static void main(String[] args) {
         HashSet<Campania> campanias = new HashSet();
         mainMenu(campanias);
     }
-
+    
     public static void mainMenu(HashSet<Campania> campanias) {
         int menu;
         do {
@@ -32,6 +32,7 @@ public class Ejercicio7 {
                     addDonacion(campanias);
                 }
                 case 3 -> {
+                    Campania.mostrarCampaniasDonaciones(campanias);
                 }
                 case 4 -> {
                     campaniasNombre(campanias);
@@ -47,14 +48,14 @@ public class Ejercicio7 {
             }
         } while (menu != 7);
     }
-
+    
     public static void addCampania(HashSet<Campania> campanias) {
         System.out.print("Introduce el nombre de la campania: ");
         String nombre = pedirString();
         Campania nueva = new Campania(nombre);
         campanias.add(nueva);
     }
-
+    
     public static void addDonacion(HashSet<Campania> campanias) {
         boolean continuar;
         do {
@@ -89,7 +90,7 @@ public class Ejercicio7 {
             }
         } while (continuar);
     }
-
+    
     public static boolean comprobarRespuesta() {
         boolean valida;
         boolean continuar = false;
@@ -109,7 +110,7 @@ public class Ejercicio7 {
         } while (!valida);
         return continuar;
     }
-
+    
     public static void campaniasNombre(HashSet<Campania> campanias) {
         ArrayList<Campania> listaCampanias = new ArrayList<>(campanias);
         Collections.sort(listaCampanias);
@@ -117,7 +118,7 @@ public class Ejercicio7 {
             System.out.println(c);
         }
     }
-
+    
     public static void totalRecaudado(HashSet<Campania> campanias) {
         float total = 0;
         for (Campania c : campanias) {
@@ -128,18 +129,18 @@ public class Ejercicio7 {
         System.out.println("La recaudacion total es de: " + total);
     }
     
-        public static void mayorDonacion(HashSet<Campania> campanias) {
+    public static void mayorDonacion(HashSet<Campania> campanias) {
         float mayorDonacion = Float.MIN_VALUE;
         for (Campania c : campanias) {
             for (Donacion d : c.getDonaciones()) {
                 if (d.getCantidad() > mayorDonacion) {
-                mayorDonacion = d.getCantidad();
+                    mayorDonacion = d.getCantidad();
                 }
             }
         }
         System.out.println("La mayor donacion es de: " + mayorDonacion);
     }
-
+    
     public static void opcionesMenu() {
         System.out.println("1. Add campania");
         System.out.println("2. Add donacion");
@@ -149,19 +150,19 @@ public class Ejercicio7 {
         System.out.println("6. Mostrar mayor donacion");
         System.out.println("7. Salir del programa");
     }
-
+    
     public static int pedirInt() {
         Scanner entradaInt = new Scanner(System.in);
         int entero = entradaInt.nextInt();
         return entero;
     }
-
+    
     public static String pedirString() {
         Scanner entradaString = new Scanner(System.in);
         String cadena = entradaString.nextLine();
         return cadena;
     }
-
+    
     public static float pedirFloat() {
         Scanner entradaFloat = new Scanner(System.in);
         float comaFlotante = entradaFloat.nextFloat();
