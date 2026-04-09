@@ -36,13 +36,18 @@ public class Ejercicio6 {
                     campania1.addDonacion(nombre, cantidad);
                 }
                 case 2 -> {
-                    campania1.mostrarDonaciones(campania1);
+                    campania1.mostrarDonaciones();
                 }
                 case 3 -> {
+                    System.out.print("Introduce el nombre: ");
+                    String nombre = pedirString();
+                    campania1.donacionesPorNombre(nombre);
                 }
                 case 4 -> {
+                    campania1.mostrarDonacionesTotal();
                 }
                 case 5 -> {
+                    campania1.mostrarRecaudacion();
                 }
                 case 6 -> {
                 }

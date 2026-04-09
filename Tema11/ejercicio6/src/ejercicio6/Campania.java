@@ -1,6 +1,7 @@
 package ejercicio6;
 
 import java.util.HashSet;
+import java.util.Iterator;
 
 /**
  *
@@ -47,15 +48,34 @@ public class Campania {
         conjunto.add(donacion);
     }
 
-    public void mostrarDonaciones(Campania campania) {
-        for (int i = 0; i < conjunto.size(); i++) {
-            System.out.println(conjunto);
+    public void mostrarDonaciones() {
+        for (Donacion donacion : conjunto) {
+            System.out.println(donacion);
         }
     }
-    
+
     public void donacionesPorNombre(String nombre) {
-        for (int i = 0; i < conjunto.size(); i++) {
-            if (conjunto.)
+        for (Donacion donacion : conjunto) {
+            if (donacion.getNombre().matches(nombre)) {
+                System.out.println(donacion);
+            }
         }
+    }
+
+    public void mostrarDonacionesTotal() {
+        System.out.println("El total de donaciones es de " + conjunto.size());
+    }
+
+    public void mostrarRecaudacion() {
+        float totalDonaciones = 0;
+        for (Donacion donacion : conjunto) {
+            totalDonaciones += donacion.getCantidad();
+        }
+        System.out.println("El total de donaciones es: " + totalDonaciones);
+    }
+
+    public void ordenarDonaciones(Campania campania) {
+        Donacion[] donaciones = new Donacion[conjunto.size()];
+        
     }
 }
