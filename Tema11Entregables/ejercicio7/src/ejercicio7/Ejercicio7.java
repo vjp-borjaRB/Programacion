@@ -43,8 +43,6 @@ public class Ejercicio7 {
                 case 6 -> {
                     mayorDonacion(campanias);
                 }
-                case 7 -> {
-                }
             }
         } while (menu != 7);
     }
