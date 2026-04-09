@@ -1,8 +1,6 @@
 package ejercicio6;
 
 import java.util.Scanner;
-import java.util.ArrayList;
-
 /**
  *
  * @author Borja Romero

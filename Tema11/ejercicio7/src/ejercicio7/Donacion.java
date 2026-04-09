@@ -1,0 +1,52 @@
+package ejercicio7;
+
+import java.util.HashSet;
+
+/**
+ *
+ * @author Borja Romero
+ */
+public class Donacion {
+
+    private String nombre;
+    private float cantidad;
+
+    public Donacion() {
+        nombre = "";
+        cantidad = 0;
+    }
+
+    public Donacion(String nombre, float cantidad) {
+        this.nombre = nombre;
+        this.cantidad = cantidad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public float getCantidad() {
+        return cantidad;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setCantidad(float cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    @Override
+    public String toString() {
+        return "Donacion{" + "nombre=" + nombre + ", cantidad=" + cantidad + '}';
+    }
+
+    public static void mostrarDonaciones(HashSet<Donacion> donaciones) {
+        for (Donacion d : donaciones) {
+            System.out.println("\tDONACION");
+            System.out.println("\tNombre -> " + d.nombre);
+            System.out.println("\tCantidad -> " + d.cantidad);
+        }
+    }
+}
