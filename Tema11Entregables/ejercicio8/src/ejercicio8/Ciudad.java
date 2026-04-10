@@ -13,12 +13,17 @@ public class Ciudad {
 
     public Ciudad() {
         nombre = "";
-        sedes = new HashMap();
+        sedes = new HashMap<>();
     }
 
     public Ciudad(String nombre, HashMap<Integer, Sede> sedes) {
         this.nombre = nombre;
         this.sedes = sedes;
+    }
+
+    public Ciudad(String nombre) {
+        this.nombre = nombre;
+        sedes = new HashMap<>();
     }
 
     public String getNombre() {

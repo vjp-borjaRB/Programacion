@@ -55,7 +55,7 @@ public class Campania implements Comparable<Campania> {
     }
 
     @Override
-    public int compareTo(Campania o) {
+    public int compareTo(Campania o) { // Comparable
         return this.nombre.compareToIgnoreCase(o.nombre);
     }
 

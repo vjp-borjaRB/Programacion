@@ -1,10 +1,12 @@
 package ejercicio8;
 
+import java.util.HashMap;
+
 /**
  *
  * @author Borja Romero
  */
-public class Sede {
+public class Sede implements Comparable<Sede> {
 
     private String nombre;
     private float ingresosAnuales;
@@ -38,6 +40,17 @@ public class Sede {
     @Override
     public String toString() {
         return "Sede{" + "nombre=" + nombre + ", ingresosAnuales=" + ingresosAnuales + '}';
+    }
+
+    public static void mostrarSedes(HashMap<Integer, Sede> sedes) { // Para cada sede del hashmap de sedes muestra el identificador y la sede
+        sedes.forEach((id, sede) -> {
+            System.out.println(id + " -> " + sede);
+        });
+    }
+
+    @Override
+    public int compareTo(Sede o) {
+        return Float.compare(this.ingresosAnuales, o.ingresosAnuales);
     }
 
 }
