@@ -13,14 +13,10 @@ public class Ejercicio1 {
 
     public static void main(String[] args) {
         ArrayList<Contacto> listaContactos = new ArrayList<>();
-        try {
-            mainMenu(listaContactos);
-        } catch (InputMismatchException e) {
-            System.err.println("Introduce el tipo de dato correcto");
-        }
+        mainMenu(listaContactos);
     }
 
-    public static void mainMenu(ArrayList<Contacto> listaContactos) {
+    public static void mainMenu(ArrayList<Contacto> listaContactos){
         int menu;
         do {
             mostrarOpciones();
@@ -42,7 +38,7 @@ public class Ejercicio1 {
         } while (menu != 5);
     }
 
-    public static void addContactos(ArrayList<Contacto> listaContactos) throws InputMismatchException {
+    public static void addContactos(ArrayList<Contacto> listaContactos) {
         String nombre, telefono;
         int edad;
         System.out.print("Introduce el nombre: ");
