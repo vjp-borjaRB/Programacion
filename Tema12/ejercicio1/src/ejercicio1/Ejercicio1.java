@@ -16,29 +16,33 @@ public class Ejercicio1 {
         mainMenu(listaContactos);
     }
 
-    public static void mainMenu(ArrayList<Contacto> listaContactos){
+    public static void mainMenu(ArrayList<Contacto> listaContactos) {
         int menu;
         do {
             mostrarOpciones();
             menu = pedirInt();
-            switch (menu) {
-                case 1 -> {
-                    addContactos(listaContactos);
+            try {
+                switch (menu) {
+                    case 1 -> {
+                        addContactos(listaContactos);
+                    }
+                    case 2 -> {
+                        visualizarLista(listaContactos);
+                    }
+                    case 3 -> {
+                        eliminarContacto(listaContactos);
+                    }
+                    case 4 -> {
+                        mostrarPorEdad(listaContactos);
+                    }
                 }
-                case 2 -> {
-                    visualizarLista(listaContactos);
-                }
-                case 3 -> {
-                    eliminarContacto(listaContactos);
-                }
-                case 4 -> {
-                    mostrarPorEdad(listaContactos);
-                }
+            } catch (InputMismatchException e) {
+                System.err.println("Introduce el tipo de dato correcto");
             }
         } while (menu != 5);
     }
 
-    public static void addContactos(ArrayList<Contacto> listaContactos) {
+    public static void addContactos(ArrayList<Contacto> listaContactos) throws InputMismatchException {
         String nombre, telefono;
         int edad;
         System.out.print("Introduce el nombre: ");
