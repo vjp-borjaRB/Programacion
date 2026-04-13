@@ -4,7 +4,7 @@ package ejercicio1;
  *
  * @author Borja Romero
  */
-public class Contacto {
+public class Contacto implements Comparable<Contacto> {
 
     private String nombre;
     private int edad;
@@ -51,4 +51,8 @@ public class Contacto {
         return "Contacto{" + "nombre=" + nombre + ", edad=" + edad + ", telefono=" + telefono + '}';
     }
 
+    @Override
+    public int compareTo(Contacto o) {
+        return this.edad - o.edad;
+    }
 }

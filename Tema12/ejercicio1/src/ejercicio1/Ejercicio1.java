@@ -2,6 +2,8 @@ package ejercicio1;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.InputMismatchException;
 
 /**
  *
@@ -11,27 +13,36 @@ public class Ejercicio1 {
 
     public static void main(String[] args) {
         ArrayList<Contacto> listaContactos = new ArrayList<>();
+        try {
+            mainMenu(listaContactos);
+        } catch (InputMismatchException e) {
+            System.err.println("Introduce el tipo de dato correcto");
+        }
     }
 
-    public static void mainMenu() {
+    public static void mainMenu(ArrayList<Contacto> listaContactos) {
         int menu;
         do {
             mostrarOpciones();
             menu = pedirInt();
             switch (menu) {
                 case 1 -> {
+                    addContactos(listaContactos);
                 }
                 case 2 -> {
+                    visualizarLista(listaContactos);
                 }
                 case 3 -> {
+                    eliminarContacto(listaContactos);
                 }
                 case 4 -> {
+                    mostrarPorEdad(listaContactos);
                 }
             }
         } while (menu != 5);
     }
 
-    public static void addContactos() {
+    public static void addContactos(ArrayList<Contacto> listaContactos) throws InputMismatchException {
         String nombre, telefono;
         int edad;
         System.out.print("Introduce el nombre: ");
@@ -40,6 +51,37 @@ public class Ejercicio1 {
         edad = pedirInt();
         System.out.print("Introduce el telefono: ");
         telefono = pedirString();
+        Contacto nuevo = new Contacto(nombre, edad, telefono);
+        listaContactos.add(nuevo);
+    }
+
+    public static void visualizarLista(ArrayList<Contacto> listaContactos) {
+        for (Contacto contactoI : listaContactos) {
+            System.out.println(contactoI);
+        }
+    }
+
+    public static void eliminarContacto(ArrayList<Contacto> listaContactos) {
+        String telefono;
+        int i = 0;
+        boolean encontrado = false;
+        System.out.print("Introduce el numero de telefono: ");
+        telefono = pedirString();
+        while (i < listaContactos.size() && !encontrado) {
+            if (listaContactos.get(i).getTelefono().equals(telefono)) {
+                listaContactos.remove(i);
+                encontrado = true;
+            } else {
+                i++;
+            }
+        }
+    }
+
+    public static void mostrarPorEdad(ArrayList<Contacto> listaContactos) {
+        Collections.sort(listaContactos);
+        for (Contacto contactoI : listaContactos) {
+            System.out.println(contactoI);
+        }
     }
 
     public static void mostrarOpciones() {
