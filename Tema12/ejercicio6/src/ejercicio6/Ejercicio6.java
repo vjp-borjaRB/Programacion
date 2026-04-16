@@ -11,6 +11,7 @@ import java.util.Scanner;
  *
  * @author Borja Romero
  */
+
 public class Ejercicio6 {
 
     public static void main(String[] args) {
@@ -31,7 +32,6 @@ public class Ejercicio6 {
                     mostrarFichero(nombreFichero);
                 }
             }
-
         } while (menu != 3);
     }
 
@@ -57,7 +57,6 @@ public class Ejercicio6 {
 
     public static void mostrarFichero(String nombreFichero) {
         try {
-
             try (FileReader fr = new FileReader(nombreFichero); BufferedReader br = new BufferedReader(fr);) {
                 String linea;
                 while ((linea = br.readLine()) != null) {

@@ -36,16 +36,16 @@ public class Ejercicio5 {
 
     public static void addContactos() {
         try {
+            String nombre, telefono;
+            int edad;
+            System.out.print("Introduce el nombre: ");
+            nombre = pedirString();
+            System.out.print("Introduce la edad: ");
+            edad = pedirInt();
+            System.out.print("Introduce el telefono: ");
+            telefono = pedirString();
+            Contacto nuevo = new Contacto(nombre, edad, telefono);
             try (FileWriter fwr = new FileWriter("agenda.txt", true); PrintWriter pwr = new PrintWriter(fwr)) {
-                String nombre, telefono;
-                int edad;
-                System.out.print("Introduce el nombre: ");
-                nombre = pedirString();
-                System.out.print("Introduce la edad: ");
-                edad = pedirInt();
-                System.out.print("Introduce el telefono: ");
-                telefono = pedirString();
-                Contacto nuevo = new Contacto(nombre, edad, telefono);
                 pwr.println(nuevo);
             }
         } catch (IOException e) {
@@ -57,7 +57,6 @@ public class Ejercicio5 {
 
     public static void visualizarLista() {
         try {
-
             try (FileReader fr = new FileReader("agenda.txt"); BufferedReader br = new BufferedReader(fr)) {
                 String linea;
                 linea = br.readLine();
