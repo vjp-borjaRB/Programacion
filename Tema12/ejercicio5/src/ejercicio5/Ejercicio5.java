@@ -1,16 +1,16 @@
 package ejercicio5;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.io.FileReader;
 import java.io.BufferedReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
 /**
  *
- * @author
+ * @author Borja Romero
  */
 public class Ejercicio5 {
 
@@ -36,8 +36,7 @@ public class Ejercicio5 {
 
     public static void addContactos() {
         try {
-            FileWriter fwr = new FileWriter("agenda.txt", true);
-            try (PrintWriter pwr = new PrintWriter(fwr)) {
+            try (FileWriter fwr = new FileWriter("agenda.txt", true); PrintWriter pwr = new PrintWriter(fwr)) {
                 String nombre, telefono;
                 int edad;
                 System.out.print("Introduce el nombre: ");
@@ -58,8 +57,8 @@ public class Ejercicio5 {
 
     public static void visualizarLista() {
         try {
-            FileReader fr = new FileReader("agenda.txt");
-            try (BufferedReader br = new BufferedReader(fr)) {
+
+            try (FileReader fr = new FileReader("agenda.txt"); BufferedReader br = new BufferedReader(fr)) {
                 String linea;
                 linea = br.readLine();
                 while (linea != null) {
