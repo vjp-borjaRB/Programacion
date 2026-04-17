@@ -49,7 +49,7 @@ public class EscapeRoom {
                 }
                 
                 try (FileWriter fwr = new FileWriter("claves.txt"); PrintWriter pwr = new PrintWriter(fwr)) {
-                    pwr.print(codigos);
+                    pwr.print(codigos); 
                 }
             }
         } catch (IOException f) {
