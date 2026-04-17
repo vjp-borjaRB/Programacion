@@ -13,7 +13,7 @@ import java.io.IOException;
 public class EscapeRoom {
 
     public static void main(String[] args) {
-        aislarRegistros();
+        buscarClaves();
     }
 
     public static void aislarRegistros() {
@@ -39,7 +39,20 @@ public class EscapeRoom {
     }
 
     public static void buscarClaves() {
+        try {
+            String pista = "04dedf8afeb8a4177a009f41bb78018af601e341ed4322d4073911c9ac879726";
+            try (FileReader fr = new FileReader("04dedf8afeb8a4177a009f41bb78018af601e341ed4322d4073911c9ac879726.txt"); BufferedReader br = new BufferedReader(fr);) {
+                String linea;
+                while ((linea = br.readLine()) != null) {
+                if (linea.contains(pista)) {
+                    System.out.println(linea);
+                }
+                }
+            }
 
+        } catch (IOException f) {
+            System.err.println("Error");
+        }
     }
 
 }
