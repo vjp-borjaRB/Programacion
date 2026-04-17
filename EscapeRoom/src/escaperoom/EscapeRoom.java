@@ -11,11 +11,11 @@ import java.io.IOException;
  * @author Borja Romero
  */
 public class EscapeRoom {
-
+    
     public static void main(String[] args) {
         buscarClaves();
     }
-
+    
     public static void aislarRegistros() {
         try {
             String lineas = "";
@@ -37,22 +37,24 @@ public class EscapeRoom {
             System.err.println("Error al leer el archivo");
         }
     }
-
+    
     public static void buscarClaves() {
         try {
-            String pista = "04dedf8afeb8a4177a009f41bb78018af601e341ed4322d4073911c9ac879726";
+            String codigos = "";
             try (FileReader fr = new FileReader("04dedf8afeb8a4177a009f41bb78018af601e341ed4322d4073911c9ac879726.txt"); BufferedReader br = new BufferedReader(fr);) {
                 String linea;
                 while ((linea = br.readLine()) != null) {
-                if (linea.contains(pista)) {
-                    System.out.println(linea);
+                    codigos += linea.toLowerCase();
+                    codigos += "\n";
                 }
+                
+                try (FileWriter fwr = new FileWriter("claves.txt"); PrintWriter pwr = new PrintWriter(fwr)) {
+                    pwr.print(codigos);
                 }
             }
-
         } catch (IOException f) {
             System.err.println("Error");
         }
     }
-
+    
 }
