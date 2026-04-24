@@ -1,4 +1,4 @@
-package ejercicio13;
+package ejercicio14;
 
 /**
  *
@@ -10,10 +10,10 @@ public class Becario {
     private String sexo;
     private int edad;
     private int numeroSuspensos;
-    private String residenciaFamiliar;
+    private boolean residenciaFamiliar;
     private int ingresos;
 
-    public Becario(String nombreApellido, String sexo, int edad, int numeroSuspensos, String residenciaFamiliar, int ingresos) {
+    public Becario(String nombreApellido, String sexo, int edad, int numeroSuspensos, boolean residenciaFamiliar, int ingresos) {
         this.nombreApellido = nombreApellido;
         this.sexo = sexo;
         this.edad = edad;
@@ -38,7 +38,7 @@ public class Becario {
         return numeroSuspensos;
     }
 
-    public String getResidenciaFamiliar() {
+    public boolean getResidenciaFamiliar() {
         return residenciaFamiliar;
     }
 
@@ -62,7 +62,7 @@ public class Becario {
         this.numeroSuspensos = numeroSuspensos;
     }
 
-    public void setResidenciaFamiliar(String residenciaFamiliar) {
+    public void setResidenciaFamiliar(boolean residenciaFamiliar) {
         this.residenciaFamiliar = residenciaFamiliar;
     }
 

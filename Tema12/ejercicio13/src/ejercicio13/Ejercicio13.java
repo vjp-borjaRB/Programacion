@@ -35,7 +35,7 @@ public class Ejercicio13 {
             int ingresos = pedirInt();
             Becario nuevo = new Becario(nombreApellido, sexo, edad, numeroSuspensos, residenciaFamiliar, ingresos);
             try (FileWriter fwr = new FileWriter("DatosBeca.txt", true); PrintWriter pwr = new PrintWriter(fwr)) {
-                pwr.println(nuevo);
+                pwr.println(nuevo.datosBecario());
             }
         } catch (IOException w) {
             System.err.println("Error al escribir el archivo");
